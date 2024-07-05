@@ -1,0 +1,38 @@
+header {
+    width: 100%;
+    height: 56px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-container-left {
+    display: flex;
+    /* width: 50%; */
+    width: 450px;
+    align-items: center;
+    padding-left: 16px;
+    /* justify-content: flex-start; */
+}
+.header-logo{
+    width: 160px;
+    height: 40px;
+    padding-left: 10px;
+}
+.header-container-right {
+    display: flex;
+    /* width: 25%; */
+    width: 300px;
+    align-items: center;
+    justify-content: flex-end;
+}
+.header-account {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+.header-container-right img {
+    width: 24px;
+    height: 24px;
+}

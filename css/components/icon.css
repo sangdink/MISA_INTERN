@@ -1,0 +1,14 @@
+.icon {
+    width: 24px;
+    height: 24px;
+    /* padding: 2px; */
+}
+.avt {
+    padding: 0 16px;
+}
+.ellipsis-h {
+    padding: 0 16px;
+}
+.menu li img {
+    margin: 0 12px;
+}

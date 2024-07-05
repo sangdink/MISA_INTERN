@@ -1,0 +1,40 @@
+.btn{
+    min-width: 80px;
+    height: 36px;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 0 16px;
+    border: 1px solid #666666;
+}
+.btn-green {
+    color: #fff;
+    background-color: #50B83C;
+    padding: 0 16px 0 12px;
+    border: unset;
+}
+.btn-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 4px;
+}
+.btn-green:hover {
+    background-color: #124009;
+}
+
+.btn-green:active{
+    background-color: #39AC66;
+}
+
+.main-body-top-right .button-export-excel {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    border: 1px solid ##9E9E9E;
+    background-color: #E0E0E0;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6px;
+    cursor: pointer;
+    /* box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2); Đổ bóng */
+}

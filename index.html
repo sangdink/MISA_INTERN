@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/layout/flex.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-container-left">
+                <div><img class="icon" src="./assets/img/toggle.png" alt=""></div>
+            <div><img class = "header-logo" src="/assets/img/cukcuk-logo.png" alt=""></div>
+            <div class="header-combobox-container">
+                <label for="location">
+                    <select name="options" id="options">
+                        <option value="HaNoi">Chi nhánh Hà Nội</option>
+                        <option value="HaNoi">Chi nhánh Hồ Chí Minh</option>
+                        <option value="HaNoi">Chi nhánh Đà Nẵng</option>
+                        <option value="HaNoi">Chi nhánh Nam Định</option>
+                    </select>
+                </label>
+            </div>
+            </div>
+            <div class="header-container-right">
+                <div class="header-account">
+                    <div><img class="icon avt" src="./assets/icon/avatar-default.png" alt=""></div>
+                    <div>Đinh Thanh Sáng</div>
+                </div>
+                <div class="icon ellipsis-h">
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+            </div>
+        </header>
+        <nav class="sidebar close">
+            <ul class="sidebar-menu">
+                <li><a href="#"><img class="icon" src="/assets/icon/dashboard.png" alt=""><div class="text">Trang chủ</div></a></li>
+                <li><a href="#"><img class="icon" src="./assets/icon/report.png" alt=""><div class="text">Báo cáo</div></a></li>
+                <li><a href="#"><img class="icon" src="./assets/icon/dic-employee.png" alt=""><div class="text">Nhân viên</div></a></li>
+                <li><a href="#"><img class="icon" src="./assets/icon/setting.png" alt=""><div class="text">Cài đặt</div></a></li>
+            </ul>
+            <div class="sidebar-bottom">
+                <img class="icon" src="./assets/icon/btn-prev-page.svg" alt="">
+                <span class="text">Thu gọn</span>
+            </div>
+        </nav>
+        <div class="main">
+            <div class="main-header">
+                <h1>Quản lý nhân viên</h1>
+                <div class="btn btn-green btn-icon" onclick="openForm()"><img class="icon" src="./assets/icon/add.png" alt=""><div>Thêm mới</div></div>
+                <iframe id="myForm1" src="./layout/form.html"></iframe>
+            </div>
+            <div class="main-body">
+                <div class="main-body-top">
+                    <div class="main-body-top-left">
+                        <input class="search-input" type="text" placeholder="Tìm kiếm theo mã, họ tên">
+                        <img class="icon" src="./assets/icon/search.png" alt="">
+                    </div>
+                    <div class="main-body-top-right">
+                        <div class="button-export-excel"><img class="icon" src="/assets/icon/export-excel-50.png" alt=""></div>
+                        <div class="button-export-excel"><img class="icon" src="/assets/icon/refresh.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="main-body-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Mã nhân viên</th>
+                                <th>Họ và tên</th>
+                                <th>Giới tính</th>
+                                <th>Ngày sinh</th>
+                                <th>Địa chỉ email</th>
+                                <th>Địa chỉ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Row 1, Col 1</td>
+                                <td>Row 1, Col 2</td>
+                                <td>Row 1, Col 3</td>
+                                <td>Row 1, Col 4</td>
+                                <td>Row 1, Col 5</td>
+                                <td>Row 1, Col 6</td>
+                                <td>Row 1, Col 7</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1, Col 1</td>
+                                <td>Row 1, Col 2</td>
+                                <td>Row 1, Col 3</td>
+                                <td>Row 1, Col 4</td>
+                                <td>Row 1, Col 5</td>
+                                <td>Row 1, Col 6</td>
+                                <td>Row 1, Col 7</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1, Col 1</td>
+                                <td>Row 1, Col 2</td>
+                                <td>Row 1, Col 3</td>
+                                <td>Row 1, Col 4</td>
+                                <td>Row 1, Col 5</td>
+                                <td>Row 1, Col 6</td>
+                                <td>Row 1, Col 7</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1, Col 1</td>
+                                <td>Row 1, Col 2</td>
+                                <td>Row 1, Col 3</td>
+                                <td>Row 1, Col 4</td>
+                                <td>Row 1, Col 5</td>
+                                <td>Row 1, Col 6</td>
+                                <td>Row 1, Col 7</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1, Col 1</td>
+                                <td>Row 1, Col 2</td>
+                                <td>Row 1, Col 3</td>
+                                <td>Row 1, Col 4</td>
+                                <td>Row 1, Col 5</td>
+                                <td>Row 1, Col 6</td>
+                                <td>Row 1, Col 7</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1, Col 1</td>
+                                <td>Row 1, Col 2</td>
+                                <td>Row 1, Col 3</td>
+                                <td>Row 1, Col 4</td>
+                                <td>Row 1, Col 5</td>
+                                <td>Row 1, Col 6</td>
+                                <td>Row 1, Col 7</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1, Col 1</td>
+                                <td>Row 1, Col 2</td>
+                                <td>Row 1, Col 3</td>
+                                <td>Row 1, Col 4</td>
+                                <td>Row 1, Col 5</td>
+                                <td>Row 1, Col 6</td>
+                                <td>Row 1, Col 7</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1, Col 1</td>
+                                <td>Row 1, Col 2</td>
+                                <td>Row 1, Col 3</td>
+                                <td>Row 1, Col 4</td>
+                                <td>Row 1, Col 5</td>
+                                <td>Row 1, Col 6</td>
+                                <td>Row 1, Col 7</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1, Col 1</td>
+                                <td>Row 1, Col 2</td>
+                                <td>Row 1, Col 3</td>
+                                <td>Row 1, Col 4</td>
+                                <td>Row 1, Col 5</td>
+                                <td>Row 1, Col 6</td>
+                                <td>Row 1, Col 7</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1, Col 1</td>
+                                <td>Row 1, Col 2</td>
+                                <td>Row 1, Col 3</td>
+                                <td>Row 1, Col 4</td>
+                                <td>Row 1, Col 5</td>
+                                <td>Row 1, Col 6</td>
+                                <td>Row 1, Col 7</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1, Col 1</td>
+                                <td>Row 1, Col 2</td>
+                                <td>Row 1, Col 3</td>
+                                <td>Row 1, Col 4</td>
+                                <td>Row 1, Col 5</td>
+                                <td>Row 1, Col 6</td>
+                                <td>Row 1, Col 7</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1, Col 1</td>
+                                <td>Row 1, Col 2</td>
+                                <td>Row 1, Col 3</td>
+                                <td>Row 1, Col 4</td>
+                                <td>Row 1, Col 5</td>
+                                <td>Row 1, Col 6</td>
+                                <td>Row 1, Col 7</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1, Col 1</td>
+                                <td>Row 1, Col 2</td>
+                                <td>Row 1, Col 3</td>
+                                <td>Row 1, Col 4</td>
+                                <td>Row 1, Col 5</td>
+                                <td>Row 1, Col 6</td>
+                                <td>Row 1, Col 7</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1, Col 1</td>
+                                <td>Row 1, Col 2</td>
+                                <td>Row 1, Col 3</td>
+                                <td>Row 1, Col 4</td>
+                                <td>Row 1, Col 5</td>
+                                <td>Row 1, Col 6</td>
+                                <td>Row 1, Col 7</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="main-body-bottom">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/responsive_sidebar.js"></script>
+    <script>
+        function openForm() {
+            document.getElementById("myForm1").style.display = "block";
+            iframe.onload = function() {
+                adjustIframeSize(iframe);
+            };
+        }
+        window.addEventListener('message', function(event) {
+            if (event.data === 'closeIframe') {
+                document.getElementById('myForm1').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

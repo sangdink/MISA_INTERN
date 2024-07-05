@@ -1,0 +1,51 @@
+.form-popup {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid #f1f1f1;
+    z-index: 12;
+    background-color: white;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+} 
+.form-heading h2{
+    margin: 0 0 32px 0;
+}
+.vertical-alignment > label{
+    padding-bottom: 8px;
+}
+.vertical-alignment {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 24px;
+}
+.padding-no {
+    padding: 0;
+}
+.padding-right {
+    padding-right: 8px;
+}
+.horizontal-alignment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.form-container-button {
+    float: right;
+    margin-top: 32px;
+}
+.form-container-button .btn-green {
+    margin-left: 12px;
+}
+.form-control > .horizontal-alignment > .vertical-alignment:first-child {
+    padding-right: 24px;
+}
+.form-control input {
+    height: 36px;
+    padding: 0;
+}
