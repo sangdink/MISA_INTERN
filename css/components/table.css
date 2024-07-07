@@ -1,6 +1,12 @@
+.main-body-table {
+    width: 100%;
+    height: calc(100% - 112px);
+}
 table {
     width: 100%;
+    height: 100%;
     border-collapse: collapse;
+    flex: 1;
 }
 
 th, td {
@@ -10,14 +16,20 @@ th, td {
 }
 
 th {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #EEEEEE;
 }
 
-tr:nth-child(even) {
-    background-color: #f2f2f2;
+
+th:hover {
+    background-color: #E0E0E0;
+    cursor: pointer;
 }
 
 tr:hover {
-    background-color: #ddd;
+    background-color: #F1FFEF;
+    cursor: pointer;
+}
+
+tr {
+    height: 48px;
 }

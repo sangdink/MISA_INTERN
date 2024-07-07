@@ -1,13 +1,3 @@
-.main {
-    flex: 1;
-    /* tat ca cac dien tich con lai duoc lap day */
-    height: calc(100vh - 56px);
-    background-color: #E0E0E0;
-    padding: 24px;
-    /* display: block; */
-    box-sizing: border-box;
-    /* de ham calc() khong tinh ca padding */
-}
 .main-header {
     display: flex;
     width: 100%;
@@ -16,16 +6,17 @@
     align-items: center;
 }
 .main-header h1 {
-    font-family: Roboto  (700);
+    font-family: Roboto (700);
     font-size: 20px;
     list-style: 26px;
     letter-spacing: 0.02em px;
 }
 .main-body {
+    position: relative;
     width: 100%;
     height: calc(100% - 56px);
     background-color: #fff;
-    padding: 0 12px;
+    padding: 0 16px;
     box-sizing: border-box;
 }
 .main-body-top {
@@ -54,4 +45,24 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
+.main-body-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 48px;
+}
+.main-body-bottom-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+.text-bold {
+    font-weight: bold;
+}
+.icon1, .page-number, .icon2, .icon3 {
+    padding-left: 16px;
 }

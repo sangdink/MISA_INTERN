@@ -12,3 +12,11 @@
 .menu li img {
     margin: 0 12px;
 }
+#btnCloseDialog {
+    color: red; 
+    float: right;
+}
+.icon1 {
+    width: 16px;
+    height: 16px;
+}

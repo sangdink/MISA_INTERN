@@ -1,20 +1,31 @@
 .form-popup {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    background-color: #00000085;
     width: 100%;
-    max-width: 650px;
-    height: auto;
+    height: 100vh;
+} 
+.form-container {
+    width: 900px;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 3px solid #f1f1f1;
-    z-index: 12;
     background-color: white;
     padding: 32px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
 } 
+#btnCloseDialog {
+    filter: brightness(0) saturate(100%) invert(25%) sepia(100%) saturate(7500%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+.form-content {
+    width: 100%;
+}
 .form-heading h2{
     margin: 0 0 32px 0;
+}
+.text-red {
+    color: red;
 }
 .vertical-alignment > label{
     padding-bottom: 8px;
@@ -23,6 +34,7 @@
     display: flex;
     flex-direction: column;
     padding-bottom: 24px;
+    width: 100%;
 }
 .padding-no {
     padding: 0;
@@ -48,4 +60,15 @@
 .form-control input {
     height: 36px;
     padding: 0;
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
 }
+input[type="date"] {
+    padding: 0 8px 0 12px;
+    box-sizing: border-box;
+}
+input[type="radio"] {
+    margin: 0 8px;
+}
+

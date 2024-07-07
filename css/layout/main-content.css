@@ -1,0 +1,9 @@
+.main {
+    flex: 1;
+    /* tat ca cac dien tich con lai duoc lap day */
+    height: calc(100vh - 56px);
+    background-color: #E0E0E0;
+    padding: 24px;
+    box-sizing: border-box;
+    /* de ham calc() khong tinh ca padding */
+}
