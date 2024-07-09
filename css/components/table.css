@@ -1,22 +1,34 @@
 .main-body-table {
     width: 100%;
     height: calc(100% - 112px);
+    overflow-y: auto;
+    /* border-top: 1px solid #E0E0E0; */
+    border-bottom: 1px solid #E0E0E0;
 }
 table {
     width: 100%;
     height: 100%;
     border-collapse: collapse;
-    flex: 1;
+    /* flex: 1; */
 }
-
+thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #EEEEEE;
+}
 th, td {
-    border: 1px solid #ddd;
+    border: 1px solid #E0E0E0;
     padding: 8px;
     text-align: left;
 }
 
 th {
     background-color: #EEEEEE;
+    border-bottom: 1px solid #E0E0E0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 
@@ -32,4 +44,44 @@ tr:hover {
 
 tr {
     height: 48px;
+}
+
+.column-ordinal-number {
+    width: 10%;
+}
+
+.column-id {
+    width: 10%;
+}
+
+.column-name {
+    width: 15%;
+}
+
+.column-gender {
+    width: 10%;
+}
+
+.column-birthday {
+    width: 10%;
+}
+
+.column-email {
+    width: 20%;
+}
+
+.column-address {
+    width: 25%;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #EEEEEE;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px #BDBDBD;
 }

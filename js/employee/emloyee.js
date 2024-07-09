@@ -25,7 +25,7 @@ class EmployeePage {
 
             // Ẩn form chi tiết:
             document.querySelector("#btnCloseDialog").addEventListener('click', ()=>{
-                document.querySelector("#myForm").style.visibility = "hidden";
+                document.querySelector("#dlgDetail").style.visibility = "hidden";
             })
 
         } catch (error) {
@@ -44,7 +44,7 @@ class EmployeePage {
             try {
                 // Hiển thị form thêm mới
                 // 1. Lấy ra element của form thêm mới:
-                const dialog = document.getElementById("myForm");
+                const dialog = document.getElementById("dlgDetail");
                 // 2. Set hiển thị form:
                 dialog.style.visibility = "visible";
             } catch (error) {

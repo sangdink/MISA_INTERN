@@ -12,8 +12,8 @@
     <div class="container">
         <header>
             <div class="header-container-left">
-                <div><img class="icon" src="./assets/img/toggle.png" alt=""></div>
-            <div><img class = "header-logo" src="/assets/img/cukcuk-logo.png" alt=""></div>
+                <div><img class="icon" src="assets/img/toggle.png" alt=""></div>
+            <div><img class = "header-logo" src="assets/img/cukcuk-logo.png" alt=""></div>
             <div class="header-combobox-container">
                 <label for="location">
                     <select name="options" id="options">
@@ -27,7 +27,7 @@
             </div>
             <div class="header-container-right">
                 <div class="header-account">
-                    <div><img class="icon avt" src="./assets/icon/avatar-default.png" alt=""></div>
+                    <div><img class="icon avt" src="assets/icon/avatar-default.png" alt=""></div>
                     <div>Đinh Thanh Sáng</div>
                 </div>
                 <div class="icon ellipsis-h">
@@ -69,16 +69,61 @@
                     <table>
                         <thead>
                             <tr>
-                                <th>STT</th>
-                                <th>Mã nhân viên</th>
-                                <th>Họ và tên</th>
-                                <th>Giới tính</th>
-                                <th>Ngày sinh</th>
-                                <th>Địa chỉ email</th>
-                                <th>Địa chỉ</th>
+                                <th class="column-ordinal-number">STT</th>
+                                <th class="column-id">Mã nhân viên</th>
+                                <th class="column-name">Họ và tên</th>
+                                <th class="column-gender">Giới tính</th>
+                                <th class="column-birthday">Ngày sinh</th>
+                                <th class="column-email">Địa chỉ email</th>
+                                <th class="column-address">Địa chỉ</th>
                             </tr>
                         </thead>
                         <tbody>
+                            <tr>
+                                <td>Row 1, Col 1</td>
+                                <td>Row 1, Col 2</td>
+                                <td>Row 1, Col 3</td>
+                                <td>Row 1, Col 4</td>
+                                <td>Row 1, Col 5</td>
+                                <td>Row 1, Col 6</td>
+                                <td>Row 1, Col 7</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1, Col 1</td>
+                                <td>Row 1, Col 2</td>
+                                <td>Row 1, Col 3</td>
+                                <td>Row 1, Col 4</td>
+                                <td>Row 1, Col 5</td>
+                                <td>Row 1, Col 6</td>
+                                <td>Row 1, Col 7</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1, Col 1</td>
+                                <td>Row 1, Col 2</td>
+                                <td>Row 1, Col 3</td>
+                                <td>Row 1, Col 4</td>
+                                <td>Row 1, Col 5</td>
+                                <td>Row 1, Col 6</td>
+                                <td>Row 1, Col 7</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1, Col 1</td>
+                                <td>Row 1, Col 2</td>
+                                <td>Row 1, Col 3</td>
+                                <td>Row 1, Col 4</td>
+                                <td>Row 1, Col 5</td>
+                                <td>Row 1, Col 6</td>
+                                <td>Row 1, Col 7</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1, Col 1</td>
+                                <td>Row 1, Col 2</td>
+                                <td>Row 1, Col 3</td>
+                                <td>Row 1, Col 4</td>
+                                <td>Row 1, Col 5</td>
+                                <td>Row 1, Col 6</td>
+                                <td>Row 1, Col 7</td>
+                            </tr>
                             <tr>
                                 <td>Row 1, Col 1</td>
                                 <td>Row 1, Col 2</td>
@@ -205,7 +250,7 @@
     </div>
 
     <!-- DIALOG -->
-    <div id="myForm" class="form-popup">
+    <div id="dlgDetail" class="form-popup">
         <div class="form-container">
             <div class="form-content">
                 <div id="btnCloseDialog"><img class="icon" src="assets/icon/x.svg" alt=""></div>
@@ -238,7 +283,7 @@
                         <div class="horizontal-alignment">
                             <div class="vertical-alignment padding-right">
                                 <label for="issued-date">Ngày sinh</label>
-                                <input class="input-date" type="date" name="issued-date">
+                                <input type="date" class="input-date" name="issued-date">
                             </div>
                             <div class="vertical-alignment">
                                 <label for="gender">Giới tính</label>
@@ -265,7 +310,7 @@
                             </div>
                             <div class="vertical-alignment">
                                 <label for="issued-date">Ngày cấp</label>
-                                <input class="input-date" type="date" name="issued-date">
+                                <input type="date" class="input-date" name="issued-date">
                             </div>
                         </div>
                         <div class="vertical-alignment">
