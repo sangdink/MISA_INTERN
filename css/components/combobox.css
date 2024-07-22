@@ -9,21 +9,8 @@
     height: 36px;
     padding: 0 12px;
     border-radius: 4px;
-    border: 1px solid #fff; /* #e6e6e6 */
-    /* -webkit-appearance: none; */ /* Ẩn mũi tên mặc định trên WebKit (Chrome, Safari) */
-    /* appearance: none; */ /* Ẩn mũi tên mặc định trên các trình duyệt hiện đại */
+    border: 1px solid #fff; 
 }
-/* .header-combobox-container:after {
-    content: "";
-    position: absolute;
-    right: 8px;
-    top: 50%;
-    margin-top: -4px;
-    border-top: 8px solid #50B83C;
-    boder-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    pointer-events: none;
-} */
 .header-combobox-container select:focus {
     border: 1px solid #50B83C;
     outline: none; /* Ẩn đường viền mặc định khi focus */

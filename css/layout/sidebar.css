@@ -5,9 +5,6 @@
     background-color: var(--sidebar-color);
     color: var(--sidebar-text-color);
 }
-.sidebar.close {
-    width: 73px;
-}
 .sidebar-menu {
     list-style-type: none;
     margin-top: 24px;
@@ -34,7 +31,8 @@
     transition: var(--tran-03);
     z-index: -1;
 }
-.sidebar-menu > li:hover:before {
+/* Khi hover hoặc active sẽ hiện background */
+.sidebar-menu > li:hover:before, .sidebar-menu li.active::before {
     opacity: 0.16;
     z-index: 1;
 }
@@ -46,7 +44,8 @@
     color: var(--sidebar-text-color);
     text-decoration: none;
 }
-.sidebar-menu > li> a:hover, .sidebar-bottom .responsive:hover {
+/* Đổi màu chữ, icon khi được hover hoặc active */
+.sidebar-menu > li > a:hover, .sidebar-bottom .responsive:hover, .sidebar-menu > li.active {
     color: var(--sidebar-text-color-hover);
     z-index: 2;
     filter: brightness(0) saturate(100%) invert(100%);
@@ -55,16 +54,28 @@
     padding: 0 12px;
     filter: brightness(100) saturate(10%) invert(62%) sepia(27%) saturate(320%) hue-rotate(175deg) brightness(150%) contrast(90%);
 }
+
+/* Thu gọn sidebar */
+.sidebar.close {
+    width: 73px;
+}
 .sidebar .text {
     opacity: 1;
     font-size: 14px;
-    /* font-weight: ; */
 }
 .sidebar.close .responsive .icon {
     transform: rotate(180deg);
 }
 .sidebar.close .text {
     opacity: 0;
+}
+
+/* Phân trang */
+.menu-item {
+    display: none;
+}
+.menu-item:first-of-type {
+    display: block;
 }
 
 /* Sidebar-bottom */
@@ -89,7 +100,4 @@
 .sidebar-bottom img {
     padding: 0 12px;
     filter: brightness(100) saturate(10%) invert(62%) sepia(27%) saturate(320%) hue-rotate(189deg) brightness(80%) contrast(120%);
-    /* filter: brightness(0) saturate(50%) invert(60%) sepia(25%) saturate(320%) hue-rotate(189deg) brightness(90%) contrast(100%); */
-    /* filter: brightness(0) saturate(50%) invert(60%) sepia(25%) saturate(500%) hue-rotate(177deg) brightness(90%) contrast(100%); */
-    /* filter: brightness(0) saturate(100%) invert(74%) sepia(18%) saturate(0%) hue-rotate(174deg) brightness(94%) contrast(88%); */
 }

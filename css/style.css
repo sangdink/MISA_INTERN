@@ -1,2 +1,16 @@
-/* Google Font Import - Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+.icon-button {
+  width: 50px; /* Chiều rộng của button */
+  height: 50px; /* Chiều cao của button */
+  border: none; /* Bỏ viền */
+  background-image: url("../assets/icon/delete-48.png"); /* Đường dẫn đến hình ảnh icon */
+  background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+  background-position: center; /* Đặt icon ở giữa button */
+  /* background-size: contain; Đảm bảo icon vừa với button */
+  border-radius: 50%; /* Bo tròn góc */
+  cursor: pointer; /* Con trỏ chuột */
+  /* transition: background-color 0.3s; Hiệu ứng chuyển màu */
+  background-color: white;
+}
+
+.icon-button:hover {
+}

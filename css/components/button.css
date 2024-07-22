@@ -1,40 +1,83 @@
-.btn{
-    min-width: 80px;
-    height: 36px;
-    border-radius: 4px;
-    cursor: pointer;
-    padding: 0 16px;
-    border: 1px solid #666666;
+.btn {
+  min-width: 80px;
+  height: 36px;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0 16px;
+  border: 1px solid #e0e0e0;
 }
 .btn-green {
-    color: #fff;
-    background-color: #50B83C;
-    padding: 0 16px 0 12px;
-    border: unset;
+  color: #fff;
+  background-color: #50b83c;
+  padding: 0 16px 0 12px;
+  border: unset;
 }
 .btn-icon {
-    display: flex;
-    align-items: center;
-    margin-right: 4px;
+  display: flex;
+  align-items: center;
+  margin-right: 4px;
 }
 .btn-green:hover {
-    background-color: #124009;
+  background-color: #124009;
 }
 
-.btn-green:active{
-    background-color: #39AC66;
+.btn-green:active {
+  background-color: #39ac66;
 }
 
 .main-body-top-right .button-export-excel {
-    display: flex;
-    width: 36px;
-    height: 36px;
-    border: 1px solid #E0E0E0;
-    background-color: #EEEEEE;
-    border-radius: 4px;
-    align-items: center;
-    justify-content: center;
-    margin-left: 6px;
-    cursor: pointer;
-    /* box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2); Đổ bóng */
+  display: flex;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #e0e0e0;
+  background-color: #eeeeee;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6px;
+  cursor: pointer;
+}
+.btnCloseDialog {
+  width: 24px;
+  height: 24px;
+  float: right;
+  background-color: white;
+  border: 0;
+  cursor: pointer;
+}
+
+/* Button Edit + Delete */
+.btnEdit {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-image: url("../../assets/icon/icons8-pencil-100.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  background-color: #fff;
+  margin: 0 8px;
+  border-radius: 4px;
+}
+.btnDelete {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-image: url("../../assets/icon/close-48.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  background-color: #fff;
+  margin: 0 8px;
+  border-radius: 4px;
+}
+.button-container {
+  visibility: hidden;
+}
+tbody tr:hover .button-container {
+  visibility: visible;
 }

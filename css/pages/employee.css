@@ -1,68 +1,71 @@
 .main-header {
-    display: flex;
-    width: 100%;
-    height: 56px;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  width: 100%;
+  height: 56px;
+  justify-content: space-between;
+  align-items: center;
 }
 .main-header h1 {
-    font-family: Roboto (700);
-    font-size: 20px;
-    list-style: 26px;
-    letter-spacing: 0.02em px;
+  font-family: Roboto (700);
+  font-size: 20px;
+  list-style: 26px;
+  letter-spacing: 0.02em px;
 }
 .main-body {
-    position: relative;
-    width: 100%;
-    height: calc(100% - 56px);
-    background-color: #fff;
-    padding: 0 16px;
-    box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: calc(100% - 56px);
+  background-color: #fff;
+  padding: 0 16px;
+  box-sizing: border-box;
 }
 .main-body-top {
-    width: 100%;
-    height: 56px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .main-body-top-left {
-    height: 36px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    border: 1px solid #E0E0E0;
-    border-radius: 4px;
-    padding: 0 12px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 0 12px 0 0;
 }
 .search-input {
-    border: none;
-    outline: none;
-    /* bỏ đường viền khi ấn vào */
+  border: none;
+  /* bỏ đường viền khi ấn vào */
+  outline: none;
 }
 .main-body-top-right {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 .main-body-bottom {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 56px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
 }
 .main-body-bottom-container {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 16px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
 }
 .text-bold {
-    font-weight: bold;
+  font-weight: bold;
 }
-.icon1, .page-number, .icon2, .icon3 {
-    padding-left: 16px;
+.icon1,
+.page-number,
+.icon2,
+.icon3 {
+  padding-left: 16px;
 }

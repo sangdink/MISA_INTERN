@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/layout/flex.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
+
 <body>
     <div class="container">
         <header>
             <div class="header-container-left">
                 <div><img class="icon" src="assets/img/toggle.png" alt=""></div>
-            <div><img class = "header-logo" src="assets/img/cukcuk-logo.png" alt=""></div>
-            <div class="header-combobox-container">
-                <label for="location">
-                    <select name="options" id="options">
-                        <option value="HaNoi">Chi nhánh Hà Nội</option>
-                        <option value="HaNoi">Chi nhánh Hồ Chí Minh</option>
-                        <option value="HaNoi">Chi nhánh Đà Nẵng</option>
-                        <option value="HaNoi">Chi nhánh Nam Định</option>
-                    </select>
-                </label>
-            </div>
+                <div><img class="header-logo" src="assets/img/cukcuk-logo.png" alt=""></div>
+                <div class="header-combobox-container">
+                    <label for="location">
+                        <select name="options" id="options">
+                            <option value="HaNoi">Chi nhánh Hà Nội</option>
+                            <option value="HaNoi">Chi nhánh Hồ Chí Minh</option>
+                            <option value="HaNoi">Chi nhánh Đà Nẵng</option>
+                            <option value="HaNoi">Chi nhánh Nam Định</option>
+                        </select>
+                    </label>
+                </div>
             </div>
             <div class="header-container-right">
                 <div class="header-account">
@@ -37,10 +39,18 @@
         </header>
         <nav class="sidebar close">
             <ul class="sidebar-menu">
-                <li><a href="#"><img class="icon" src="assets/icon/dashboard.png" alt=""><div class="text">Trang chủ</div></a></li>
-                <li><a href="#"><img class="icon" src="assets/icon/report.png" alt=""><div class="text">Báo cáo</div></a></li>
-                <li><a href="#"><img class="icon" src="assets/icon/dic-employee.png" alt=""><div class="text">Nhân viên</div></a></li>
-                <li><a href="#"><img class="icon" src="assets/icon/setting.png" alt=""><div class="text">Cài đặt</div></a></li>
+                <li><a href="#home" class="menu-link"><img class="icon" src="assets/icon/dashboard.png" alt="">
+                        <div class="text">Trang chủ</div>
+                    </a></li>
+                <li><a href="#report" class="menu-link"><img class="icon" src="assets/icon/report.png" alt="">
+                        <div class="text">Báo cáo</div>
+                    </a></li>
+                <li><a href="#employee" class="menu-link"><img class="icon" src="assets/icon/dic-employee.png" alt="">
+                        <div class="text">Nhân viên</div>
+                    </a></li>
+                <li><a href="#setting" class="menu-link"><img class="icon" src="assets/icon/setting.png" alt="">
+                        <div class="text">Cài đặt</div>
+                    </a></li>
             </ul>
             <div class="sidebar-bottom">
                 <div class="responsive">
@@ -50,321 +60,341 @@
             </div>
         </nav>
         <div class="main">
-            <div class="main-header">
-                <h1>Quản lý nhân viên</h1>
-                <button id="btnAdd" class="btn btn-green btn-icon"  onclick="openForm()"><img class="icon" src="assets/icon/add.png" alt=""><div>Thêm mới</div></button>
-            </div>
-            <div class="main-body">
-                <div class="main-body-top">
-                    <div class="main-body-top-left">
-                        <input class="search-input" type="text" placeholder="Tìm kiếm theo mã, họ tên">
-                        <img class="icon" src="assets/icon/search.png" alt="">
-                    </div>
-                    <div class="main-body-top-right">
-                        <div class="button-export-excel"><img class="icon" src="assets/icon/export-excel-50.png" alt=""></div>
-                        <div id="btnRefresh" class="button-export-excel"><img class="icon" src="assets/icon/refresh.png" alt=""></div>
-                    </div>
+            <div id="home" class="menu-item"></div>
+            <div id="report" class="menu-item"></div>
+            <div id="employee" class="menu-item">
+                <div class="main-header">
+                    <h1>Quản lý nhân viên</h1>
+                    <button id="btnAdd" class="btn btn-green btn-icon"><img class="icon" src="assets/icon/add.png"
+                            alt="">
+                        <div>Thêm mới</div>
+                    </button>
                 </div>
-                <div class="main-body-table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th class="column-ordinal-number">STT</th>
-                                <th class="column-id">Mã nhân viên</th>
-                                <th class="column-name">Họ và tên</th>
-                                <th class="column-gender">Giới tính</th>
-                                <th class="column-birthday">Ngày sinh</th>
-                                <th class="column-email">Địa chỉ email</th>
-                                <th class="column-address">Địa chỉ</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Row 1, Col 1</td>
-                                <td>Row 1, Col 2</td>
-                                <td>Row 1, Col 3</td>
-                                <td>Row 1, Col 4</td>
-                                <td>Row 1, Col 5</td>
-                                <td>Row 1, Col 6</td>
-                                <td>Row 1, Col 7</td>
-                            </tr>
-                            <tr>
-                                <td>Row 1, Col 1</td>
-                                <td>Row 1, Col 2</td>
-                                <td>Row 1, Col 3</td>
-                                <td>Row 1, Col 4</td>
-                                <td>Row 1, Col 5</td>
-                                <td>Row 1, Col 6</td>
-                                <td>Row 1, Col 7</td>
-                            </tr>
-                            <tr>
-                                <td>Row 1, Col 1</td>
-                                <td>Row 1, Col 2</td>
-                                <td>Row 1, Col 3</td>
-                                <td>Row 1, Col 4</td>
-                                <td>Row 1, Col 5</td>
-                                <td>Row 1, Col 6</td>
-                                <td>Row 1, Col 7</td>
-                            </tr>
-                            <tr>
-                                <td>Row 1, Col 1</td>
-                                <td>Row 1, Col 2</td>
-                                <td>Row 1, Col 3</td>
-                                <td>Row 1, Col 4</td>
-                                <td>Row 1, Col 5</td>
-                                <td>Row 1, Col 6</td>
-                                <td>Row 1, Col 7</td>
-                            </tr>
-                            <tr>
-                                <td>Row 1, Col 1</td>
-                                <td>Row 1, Col 2</td>
-                                <td>Row 1, Col 3</td>
-                                <td>Row 1, Col 4</td>
-                                <td>Row 1, Col 5</td>
-                                <td>Row 1, Col 6</td>
-                                <td>Row 1, Col 7</td>
-                            </tr>
-                            <tr>
-                                <td>Row 1, Col 1</td>
-                                <td>Row 1, Col 2</td>
-                                <td>Row 1, Col 3</td>
-                                <td>Row 1, Col 4</td>
-                                <td>Row 1, Col 5</td>
-                                <td>Row 1, Col 6</td>
-                                <td>Row 1, Col 7</td>
-                            </tr>
-                            <tr>
-                                <td>Row 1, Col 1</td>
-                                <td>Row 1, Col 2</td>
-                                <td>Row 1, Col 3</td>
-                                <td>Row 1, Col 4</td>
-                                <td>Row 1, Col 5</td>
-                                <td>Row 1, Col 6</td>
-                                <td>Row 1, Col 7</td>
-                            </tr>
-                            <tr>
-                                <td>Row 1, Col 1</td>
-                                <td>Row 1, Col 2</td>
-                                <td>Row 1, Col 3</td>
-                                <td>Row 1, Col 4</td>
-                                <td>Row 1, Col 5</td>
-                                <td>Row 1, Col 6</td>
-                                <td>Row 1, Col 7</td>
-                            </tr>
-                            <tr>
-                                <td>Row 1, Col 1</td>
-                                <td>Row 1, Col 2</td>
-                                <td>Row 1, Col 3</td>
-                                <td>Row 1, Col 4</td>
-                                <td>Row 1, Col 5</td>
-                                <td>Row 1, Col 6</td>
-                                <td>Row 1, Col 7</td>
-                            </tr>
-                            <tr>
-                                <td>Row 1, Col 1</td>
-                                <td>Row 1, Col 2</td>
-                                <td>Row 1, Col 3</td>
-                                <td>Row 1, Col 4</td>
-                                <td>Row 1, Col 5</td>
-                                <td>Row 1, Col 6</td>
-                                <td>Row 1, Col 7</td>
-                            </tr>
-                            <tr>
-                                <td>Row 1, Col 1</td>
-                                <td>Row 1, Col 2</td>
-                                <td>Row 1, Col 3</td>
-                                <td>Row 1, Col 4</td>
-                                <td>Row 1, Col 5</td>
-                                <td>Row 1, Col 6</td>
-                                <td>Row 1, Col 7</td>
-                            </tr>
-                            <tr>
-                                <td>Row 1, Col 1</td>
-                                <td>Row 1, Col 2</td>
-                                <td>Row 1, Col 3</td>
-                                <td>Row 1, Col 4</td>
-                                <td>Row 1, Col 5</td>
-                                <td>Row 1, Col 6</td>
-                                <td>Row 1, Col 7</td>
-                            </tr>
-                            <tr>
-                                <td>Row 1, Col 1</td>
-                                <td>Row 1, Col 2</td>
-                                <td>Row 1, Col 3</td>
-                                <td>Row 1, Col 4</td>
-                                <td>Row 1, Col 5</td>
-                                <td>Row 1, Col 6</td>
-                                <td>Row 1, Col 7</td>
-                            </tr>
-                            <tr>
-                                <td>Row 1, Col 1</td>
-                                <td>Row 1, Col 2</td>
-                                <td>Row 1, Col 3</td>
-                                <td>Row 1, Col 4</td>
-                                <td>Row 1, Col 5</td>
-                                <td>Row 1, Col 6</td>
-                                <td>Row 1, Col 7</td>
-                            </tr>
-                            <tr>
-                                <td>Row 1, Col 1</td>
-                                <td>Row 1, Col 2</td>
-                                <td>Row 1, Col 3</td>
-                                <td>Row 1, Col 4</td>
-                                <td>Row 1, Col 5</td>
-                                <td>Row 1, Col 6</td>
-                                <td>Row 1, Col 7</td>
-                            </tr>
-                            <tr>
-                                <td>Row 1, Col 1</td>
-                                <td>Row 1, Col 2</td>
-                                <td>Row 1, Col 3</td>
-                                <td>Row 1, Col 4</td>
-                                <td>Row 1, Col 5</td>
-                                <td>Row 1, Col 6</td>
-                                <td>Row 1, Col 7</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="main-body-bottom">
-                    <div class="main-body-bottom-container">
-                        <div> 
-                            <span>Tổng:</span>
-                            <span class="text-bold">100</span>
+                <div class="main-body">
+                    <div class="main-body-top">
+                        <div class="main-body-top-left">
+                            <input type="text" class="search-input" placeholder="Tìm kiếm theo mã, họ tên">
+                            <img class="icon" src="assets/icon/search.png" alt="">
                         </div>
-                        <div class="horizontal-alignment">
-                            <span>Số bản ghi/ trang</span>
-                            <div class="horizontal-alignment">
-                                <span class="text-bold page-number">1</span>
-                                <div><img class="icon1" src="assets/icon/New folder/icons8-chevron-down-26.png" alt=""></div>
+                        <div class="main-body-top-right">
+                            <div id="btnExport" class="button-export-excel"><img class="icon"
+                                    src="assets/icon/export-excel-50.png" alt=""></div>
+                            <div id="btnRefresh" class="button-export-excel"><img class="icon"
+                                    src="assets/icon/refresh.png" alt=""></div>
+                        </div>
+                    </div>
+                    <div id="tblEmployee" class="main-body-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="column-ordinal-number">STT</th>
+                                    <th class="column-id">Mã nhân viên</th>
+                                    <th class="column-name">Họ và tên</th>
+                                    <th class="column-gender">Giới tính</th>
+                                    <th class="column-birthday">Ngày sinh</th>
+                                    <th class="column-email">Địa chỉ email</th>
+                                    <th class="column-address column-actions">Địa chỉ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="actions-cell"></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="main-body-bottom">
+                        <div class="main-body-bottom-container">
+                            <div>
+                                <span>Tổng:</span>
+                                <span class="text-bold">100</span>
                             </div>
                             <div class="horizontal-alignment">
-                                <div><img class="icon icon2" src="assets/icon/btn-prev-page.svg" alt=""></div>
-                                <div><img class="icon icon3" src="assets/icon/btn-next-page.svg" alt=""></div>
+                                <span>Số bản ghi/ trang</span>
+                                <div class="horizontal-alignment">
+                                    <span class="text-bold page-number">1</span>
+                                    <div><img class="icon1" src="assets/icon/New folder/icons8-chevron-down-26.png"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <div class="horizontal-alignment">
+                                    <div><img class="icon icon2" src="assets/icon/btn-prev-page.svg" alt=""></div>
+                                    <div><img class="icon icon3" src="assets/icon/btn-next-page.svg" alt=""></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div id="setting" class="menu-item"></div>
         </div>
     </div>
 
     <!-- DIALOG -->
-    <div id="dlgDetail" class="form-popup">
+    <div id="dlgDetail" mdialog class="m-dialog">
         <div class="form-container">
             <div class="form-content">
-                <div id="btnCloseDialog"><img class="icon" src="assets/icon/x.svg" alt=""></div>
-            <div class="form-heading">
-                <h2>Thông tin nhân viên</h2>
-            </div>
-            <div class="form-control">
-                <div class="horizontal-alignment">
-                    <div class="vertical-alignment padding-no">
-                        <div class="horizontal-alignment">
-                            <div class="vertical-alignment padding-right">
-                                <label for="id">Mã nhân viên <span class="text-red">*</span></label>
-                                <input type="text" name="id" required>
+                <button class="btnCloseDialog"><img class="icon" src="assets/icon/x.svg" alt=""></button>
+                <div class="form-heading">
+                    <h2>Thông tin nhân viên</h2>
+                </div>
+                <div class="form-control">
+                    <div class="horizontal-alignment">
+                        <div class="vertical-alignment padding-no">
+                            <div class="horizontal-alignment">
+                                <div class="vertical-alignment padding-right">
+                                    <div>
+                                        <label for="id">Mã nhân viên</label>
+                                        <span class="text-red">*</span>
+                                    </div>
+                                    <input id="txtEmployeeCode" type="text" name="id" required>
+                                </div>
+                                <div class="vertical-alignment">
+                                    <div>
+                                        <label for="name">Họ và tên </label>
+                                        <span class="text-red">*</span>
+                                    </div>
+                                    <input id="txtFullName" type="text" name="name" required>
+                                </div>
                             </div>
                             <div class="vertical-alignment">
-                                <label for="name">Họ và tên <span class="text-red">*</span></label>
-                                <input type="text" name="name" required>
-                            </div>
-                        </div>
-                        <div class="vertical-alignment">
-                            <label for="position">Vị trí</label>
-                            <input type="text" name="position">
-                        </div>
-                        <div class="vertical-alignment">
-                            <label for="department">Phòng ban</label>
-                            <input type="text" name="department">
-                        </div>
-                    </div>
-                    <div class="vertical-alignment padding-no">
-                        <div class="horizontal-alignment">
-                            <div class="vertical-alignment padding-right">
-                                <label for="issued-date">Ngày sinh</label>
-                                <input type="date" class="input-date" name="issued-date">
+                                <label for="position">Vị trí</label>
+                                <input id="txtPosition" type="text" name="position">
                             </div>
                             <div class="vertical-alignment">
-                                <label for="gender">Giới tính</label>
-                                <div class="horizontal-alignment">
+                                <label for="department">Phòng ban</label>
+                                <input id="txtDepartment" type="text" name="department">
+                            </div>
+                        </div>
+                        <div class="vertical-alignment padding-no">
+                            <div class="horizontal-alignment">
+                                <div class="vertical-alignment padding-right">
+                                    <label for="date-of-birth">Ngày sinh</label>
+                                    <input id="dtDateOfBirth" type="date" class="input-date" name="date-of-birth">
+                                </div>
+                                <div class="vertical-alignment">
+                                    <label for="gender">Giới tính</label>
                                     <div class="horizontal-alignment">
-                                        <input type="radio" name="gender" id="" value="male">
-                                        <label for="male">Nam</label>
-                                    </div>
-                                    <div class="horizontal-alignment">
-                                        <input type="radio" name="gender" id="" value="female">
-                                        <label for="male">Nữ</label>
-                                    </div>
-                                    <div class="horizontal-alignment">
-                                        <input type="radio" name="gender" id="" value="other">
-                                        <label for="male">Khác</label>
+                                        <div class="horizontal-alignment">
+                                            <input id="rdoMale" type="radio" name="gender" id="" value="male" checked>
+                                            <label for="male">Nam</label>
+                                        </div>
+                                        <div class="horizontal-alignment">
+                                            <input id="rdoFemale" type="radio" name="gender" id="" value="female">
+                                            <label for="male">Nữ</label>
+                                        </div>
+                                        <div class="horizontal-alignment">
+                                            <input id="rdoOther" type="radio" name="gender" id="" value="other">
+                                            <label for="male">Khác</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="horizontal-alignment">
-                            <div class="vertical-alignment padding-right">
-                                <label for="id-card-number" title="Số chứng minh thư nhân dân">Số CMTND</label>
-                                <input type="text" name="id-card-number">
+                            <div class="horizontal-alignment">
+                                <div class="vertical-alignment padding-right">
+                                    <label for="id-card-number" title="Số chứng minh thư nhân dân">Số CMTND</label>
+                                    <input id="txtIdCardNumber" type="text" name="id-card-number">
+                                </div>
+                                <div class="vertical-alignment">
+                                    <label for="issued-date">Ngày cấp</label>
+                                    <input id="dtIssuedDate" type="date" class="input-date" name="issued-date">
+                                </div>
                             </div>
                             <div class="vertical-alignment">
-                                <label for="issued-date">Ngày cấp</label>
-                                <input type="date" class="input-date" name="issued-date">
+                                <label for="issued-location">Nơi cấp</label>
+                                <input id="txtIssuedLocation" type="text" name="issued-location">
                             </div>
                         </div>
-                        <div class="vertical-alignment">
-                            <label for="issued-location">Nơi cấp</label>
-                            <input type="text" name="issued-location">
+                    </div>
+                    <div class="vertical-alignment">
+                        <label for="address">Địa chỉ</label>
+                        <input id="txtAddress" type="text" name="address">
+                    </div>
+                    <div>
+                        <div class="horizontal-alignment">
+                            <div class="vertical-alignment padding-right">
+                                <label for="mobilephone-number">ĐT Di động</label>
+                                <input id="txtMobilephoneNumber" type="text" name="mobilephone-number">
+                            </div>
+                            <div class="vertical-alignment padding-right">
+                                <label for="landline-number">ĐT Cố định</label>
+                                <input id="txtLandlineNumber" type="text" name="landline-number">
+                            </div>
+                            <div class="vertical-alignment">
+                                <label for="email">Email</label>
+                                <input id="txtEmail" type="email" name="email">
+                            </div>
+                        </div>
+                        <div class="horizontal-alignment">
+                            <div class="vertical-alignment padding-no padding-right">
+                                <label for="bank-account">Tài khoản ngân hàng</label>
+                                <input id="txtBankAccount" type="text" name="bank-account">
+                            </div>
+                            <div class="vertical-alignment padding-no padding-right">
+                                <label for="bank-name">Tên ngân hàng</label>
+                                <input id="txtBankName" type="text" name="bank-name">
+                            </div>
+                            <div class="vertical-alignment padding-no">
+                                <label for="bank-branch">Chi nhánh</label>
+                                <input id="txtBankBranch" type="text" name="bank-branch">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="vertical-alignment">
-                    <label for="address">Địa chỉ</label>
-                    <input type="text" name="address">
-                </div>
-                <div>
+                <div class="form-container-button">
                     <div class="horizontal-alignment">
-                        <div class="vertical-alignment padding-right">
-                            <label for="mobilephone-number">ĐT Di động</label>
-                            <input type="text" name="mobilephone-number">
-                        </div>
-                        <div class="vertical-alignment padding-right">
-                            <label for="landline-number">ĐT Cố định</label>
-                            <input type="text" name="landline-number">
-                        </div>
-                        <div class="vertical-alignment">
-                            <label for="email">Email</label>
-                            <input type="text" name="email">
-                        </div>
-                    </div>
-                    <div class="horizontal-alignment">
-                        <div class="vertical-alignment padding-no padding-right">
-                            <label for="bank-account">Tài khoản ngân hàng</label>
-                            <input type="text" name="bank-account">
-                        </div>
-                        <div class="vertical-alignment padding-no padding-right">
-                            <label for="bank-name">Tên ngân hàng</label>
-                            <input type="text" name="bank-name">
-                        </div>
-                        <div class="vertical-alignment padding-no">
-                            <label for="bank-branch">Chi nhánh</label>
-                            <input type="text" name="bank-branch">
-                        </div>
+                        <button type="button" id="btnCancel" class="btn button-cancel">Hủy</button>
+                        <button type="submit" id="btnSave" class="btn btn-green">Cất</button>
                     </div>
                 </div>
             </div>
-            <div class="form-container-button">
-                <div class="horizontal-alignment">
-                    <button type="button" class="btn">Hủy</button>
-                    <button type="submit" class="btn btn-green">Cất</button>
+        </div>
+    </div>
+    <!-- THÔNG BÁO -->
+    <div mdialog class="m-dialog dialog-notice">
+        <div class="dialog-container">
+            <div class="dialog-content">
+                <button class="btnCloseDialog"><img class="icon" src="assets/icon/x.svg" alt=""></button>
+                <div class="dialog-heading">
+                    <h2>Tiêu đề Dialog</h2>
                 </div>
-            </div>
+                <div class="dialog-control">
+                    <!-- <div><img class="icon" src="/assets/icon/question-48.png" alt=""></div> -->
+                    <div class="dialog-text">Bạn có chắc chắn muốn xóa nhân viên không?</div>
+                </div>
+                <div class="float-right">
+                    <button class="btn btn-green button-confirm">Đồng ý</button>
+                </div>
             </div>
         </div>
     </div>
     <!-- JAVASCRIPT -->
+    <!-- Thư viện js -->
+    <script src="js/lib/jquery-3.7.1.js"></script>
+    <script src="js/lib/jquery-3.7.1.min.js"></script>
+    <!-- Javascript dùng chung -->
+
+    <!-- Javascript dành riêng cho page -->
     <script src="js/employee/emloyee.js"></script>
-    <script src="js/responsive_sidebar.js"></script>
+    <script src="js/components/responsive_sidebar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
+    <script>
+        $(document).ready(function ()
+        {
+            $('.menu-link').on('click', function (event)
+            {
+                event.preventDefault();
+                $('.sidebar-menu li').removeClass('active');
+
+                // Thêm lớp 'active' vào thẻ <li> chứa liên kết được nhấp
+                $(this).parent().addClass('active');
+                $('.menu-item').hide();
+
+                // Hiển thị phần tử được liên kết bằng href
+                var target = $(this).attr('href');
+                $(target).show();
+            });
+
+            $('.sidebar-menu li').eq(0).addClass('active');
+            $('.menu-item').eq(0).show();
+        });
+    </script>
 </body>
+
 </html>
