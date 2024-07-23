@@ -11,6 +11,7 @@ class EmployeePage {
     this.initEvents();
     this.loadData();
   }
+  
   /**
    * Khởi tạo các sự kiện trong page3
    * Author: DTSANG (06/07/2024)
@@ -23,10 +24,12 @@ class EmployeePage {
       document
         .querySelector("#btnAdd")
         .addEventListener("click", this.btnAddOnClick);
+      
       // Rfresh dữ liệu:
       document
         .querySelector("#btnRefresh")
         .addEventListener("click", this.btnRefreshOnClick);
+      
       // Xuất khẩu:
       document
         .querySelector("#btnExport")
@@ -52,14 +55,14 @@ class EmployeePage {
             "hidden";
           me.inputInvalids[0].focus();
         });
-
+      
       // Hủy và ẩn form chi tiết:
       document
         .querySelector("[mdialog] .button-cancel")
         .addEventListener("click", () => {
           document.querySelector("#dlgDetail").style.visibility = "hidden";
         });
-
+      
       // Lưu dữ liệu:
       document
         .querySelector("#btnSave")
@@ -71,17 +74,20 @@ class EmployeePage {
         .addEventListener("click", function (event) {
           if (event.target && event.target.matches("button.btnDelete")) {
             const employeeId = event.target.getAttribute("data-id");
-            me.deleteEmployee(employeeId);
+            me.btnDeleteOnClick(employeeId);
           }
         });
     } catch (error) {
       console.error(error);
     }
   }
+  /**
+   * Load data on table
+   * Author: DTSANG (06/07/2024)
+   */
   loadData() {
     try
     {
-      // const search = document.querySelector(".search-input");
       // Gọi api lấy dữ liệu:
       fetch("https://cukcuk.manhnv.net/api/v1/Employees")
         .then((res) => res.json())
@@ -122,7 +128,10 @@ class EmployeePage {
       console.error(error);
     }
   }
-
+  /**
+   * Click button export
+   * Author: DTSANG (19/07/2024)
+   */
   searchTable() {
     const table_rows = document.querySelectorAll("tbody tr");
     const search = document.querySelector(".search-input");
@@ -139,6 +148,7 @@ class EmployeePage {
     }
   });
   }
+
   /**
    * Click button add
    * Author: DTSANG (06/07/2024)
@@ -156,6 +166,7 @@ class EmployeePage {
       console.error(error);
     }
   }
+
   /**
    * Click button refresh
    * Author: DTSANG (06/07/2024)
@@ -168,6 +179,7 @@ class EmployeePage {
       console.error(error);
     }
   }
+
   /**
    * Click button export
    * Author: DTSANG (18/07/2024)
@@ -189,7 +201,12 @@ class EmployeePage {
       console.error(error);
     }
   }
-  deleteEmployee(EmployeeId) {
+
+  /**
+   * Click button delete
+   * Author: DTSANG (18/07/2024)
+   */
+  btnDeleteOnClick(EmployeeId) {
     debugger;
     if (confirm("Are you sure you want to delete this employee?")) {
       console.log(`Deleting employee with code: ${EmployeeId}`);
@@ -211,15 +228,6 @@ class EmployeePage {
     }
   }
 
-  // btnDeleteOnClick() {
-  //   try {
-  //     debugger;
-  //     // Hiển thị thông báo xóa nhiều:
-  //     // document.querySelector(".m-dialog.dialog-notice").style.visibility = "visible";
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // }
   /**
    * Click button add
    * Author: DTSANG (06/07/2024)
@@ -280,6 +288,7 @@ class EmployeePage {
           Department: document.getElementById("txtDepartment").value,
           DateOfBirth: document.getElementById("dtDateOfBirth").value,
           Gender: genderValue,
+          Address: document.getElementById("txtAddress").value,
           IdentityNumber: document.getElementById("txtIdCardNumber").value,
           IdentityDate: document.getElementById("dtIssuedDate").value,
           IdentityPlace: document.getElementById("txtIssuedLocation").value,
@@ -291,21 +300,6 @@ class EmployeePage {
           BankBranch: document.getElementById("txtBankBranch").value,
         };
 
-        // var data = [];
-        // var employeeCode = document.querySelector("#txtEmployeeCode").value,
-        //   fullName = document.querySelector("#txtFullName").value,
-        //   position = document.querySelector("#txtPosition").value,
-        //   dateOfBirth = document.querySelector("#dtDateOfBirth").value;
-
-        // var employeeData = {
-        //   EmployeeCode: employeeCode,
-        //   FullName: fullName,
-        //   Position: position,
-        //   DateOfBirth: dateOfBirth,
-        // };
-
-        // data.push(employeeData);
-        // console.log(data);
         console.log("Data to be sent:", employeeData);
 
         fetch("https://cukcuk.manhnv.net/api/v1/Employees", {
@@ -315,7 +309,7 @@ class EmployeePage {
           },
           body: JSON.stringify(employeeData),
         })
-          .then((response) => {
+          .then(response => {
             if (!response.ok) {
               return response.json().then((error) => {
                 throw new Error(error.message || "Lỗi không xác định");
@@ -355,21 +349,13 @@ class EmployeePage {
             document.getElementById("txtBankAccount").value = "";
             document.getElementById("txtBankName").value = "";
             document.getElementById("txtBankBranch").value = "";
+
             // Ẩn form chi tiết
             document.querySelector("#dlgDetail").style.visibility = "hidden";
 
             // Làm mới dữ liệu bảng
             this.loadData();
           });
-        // .then((data) => {
-        //   console.log("Dữ liệu đã được thêm mới:", data);
-
-        //   // Ẩn form chi tiết
-        //   document.querySelector("#dlgDetail").style.visibility = "hidden";
-
-        //   // Làm mới dữ liệu bảng
-        //   this.loadData();
-        // });
       }
 
       // const error = this.validateData();
@@ -396,95 +382,10 @@ class EmployeePage {
 
     // check input required:
     error = this.checkRequiredInput();
-    // // Kiểm tra có mã nhân viên chưa?
-    // const employeeCode = document.querySelector("#txtEmployeeCode").value;
-    // const fullName = document.querySelector("#txtFullName").value;
-    // if(employeeCode == "" || employeeCode == null || employeeCode == undefined) {
-    //     // Lưu thông tin lỗi:
-    //     error.Msg.push("Mã khách hàng không được phép để trống");
-    //     const input = document.querySelector("#txtEmployeeCode");
-    //     this.addErrorElemrntToInputNotValid(input);
-    // } else {
-    //     const input = document.querySelector("#txtFullName");
-    //     // Xóa element thông tin lỗi phía sau:
-    //     // input.classList.remove("red");
-    //     input.classList.remove("red");
-    //     input.nextElementSibling.remove();
-    // }
-
-    // // Kiểm tra có họ và tên chưa?
-    // if(fullName === "" || fullName === null || fullName === undefined) {
-    //     // Lưu thông tin lỗi:
-    //     error.Msg.push("Họ và tên không được phép để trống");
-    //     const input = document.querySelector("#txtFullName");
-    //     this.addErrorElementToInputNotValid(input);
-    // } else {
-    //     const input = document.querySelector("#txtFullName");
-    //     // Xóa element thông tin lỗi phía sau:
-    //     input.style.remove("red");
-    //     input.nextElementSibling.remove();
-    // }
-    //.....
 
     return error;
   }
-  // btnSaveOnClick() {
-  //   try {
-  //     debugger;
-  //     // Thực hiện validate dữ liệu
-  //     const validation = this.validateData();
-  //     if (validation.errors.length > 0) {
-  //       // Nếu có lỗi, hiển thị thông báo lỗi
-  //       const dialogNotice = document.querySelector(".m-dialog.dialog-notice");
-  //       dialogNotice.style.visibility = "visible";
-  //       dialogNotice.querySelector(".dialog-heading h2").innerHTML =
-  //         "Dữ liệu không hợp lệ";
-  //       const errorElement = dialogNotice.querySelector(".dialog-text");
-  //       errorElement.innerHTML = "";
-
-  //       validation.errors.forEach((msg) => {
-  //         const li = document.createElement("li");
-  //         li.textContent = msg;
-  //         errorElement.append(li);
-  //       });
-
-  //       this.inputInvalids[0].focus();
-  //     } else {
-  //       // Nếu dữ liệu hợp lệ, thực hiện gửi dữ liệu đến API
-  //       const employeeData = {
-  //         EmployeeCode: document.querySelector("#txtEmployeeCode").value,
-  //         FullName: document.querySelector("#txtFullName").value,
-  //         GenderName: document.querySelector("#txtGenderName").value,
-  //         DateOfBirth: document.querySelector("#txtDateOfBirth").value,
-  //         Email: document.querySelector("#txtEmail").value,
-  //         Address: document.querySelector("#txtAddress").value,
-  //       };
-
-  //       fetch("https://cukcuk.manhnv.net/api/v1/Employees", {
-  //         method: "POST",
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //         body: JSON.stringify(employeeData),
-  //       })
-  //         .then((response) => response.json())
-  //         .then((data) => {
-  //           console.log("Dữ liệu đã được thêm mới:", data);
-
-  //           // Ẩn form chi tiết
-  //           document.querySelector("#dlgDetail").style.visibility = "hidden";
-
-  //           // Làm mới dữ liệu bảng
-  //           this.loadData();
-  //         })
-  //         .catch((error) => {
-  //           console.error("Có lỗi xảy ra khi thêm dữ liệu:", error);
-  //         });
-  //     }
-  //   } catch (error) {
-  //     console.error("Có lỗi xảy ra:", error);
-  //   }
-  // }
+  
   /**
    * Check input required
    * Author: DTSANG (06/07/2024)
@@ -515,6 +416,7 @@ class EmployeePage {
       console.log(error);
     }
   }
+
   /**
    * Add error message to input not valid
    * Author: DTSANG (06/07/2024)
