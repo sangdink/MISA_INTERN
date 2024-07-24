@@ -1,0 +1,47 @@
+/* Skeleton Loader Styles */
+.loading {
+    display: none;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.skeleton-table {
+    width: 100%;
+}
+
+.skeleton-row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.skeleton-cell {
+    flex: 1;
+    height: 20px;
+    margin: 5px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: #e0e0e0;
+    }
+
+    50% {
+        background-color: #c0c0c0;
+    }
+
+    100% {
+        background-color: #e0e0e0;
+    }
+}
+
+#tblEmployee {
+    display: table;
+    width: 100%;
+}
+
+#tblEmployee tbody {
+    display: none;
+}

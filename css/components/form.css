@@ -85,9 +85,9 @@ input[type="radio"] {
   margin: 0 8px;
 }
 .input-invalid {
-  /* color: red; */
+  color: red;
   /* border-color: #50b83c; */
-  border-color: #ff4747;
+  /* border-color: #ff4747; */
 }
 
 /* DIALOG */
@@ -121,4 +121,10 @@ input[type="radio"] {
 }
 .dialog-control li {
   margin-bottom: 12px;
+}
+/* Thêm * cho các label required */
+.label-required::after {
+  content: "*";
+  color: red;
+  margin-left: 4px;
 }

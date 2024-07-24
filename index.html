@@ -20,9 +20,9 @@
                     <label for="location">
                         <select name="options" id="options">
                             <option value="HaNoi">Chi nhánh Hà Nội</option>
-                            <option value="HaNoi">Chi nhánh Hồ Chí Minh</option>
-                            <option value="HaNoi">Chi nhánh Đà Nẵng</option>
-                            <option value="HaNoi">Chi nhánh Nam Định</option>
+                            <option value="HoChiMinh">Chi nhánh Hồ Chí Minh</option>
+                            <option value="DaNang">Chi nhánh Đà Nẵng</option>
+                            <option value="NamDinh">Chi nhánh Nam Định</option>
                         </select>
                     </label>
                 </div>
@@ -83,6 +83,24 @@
                                     src="assets/icon/refresh.png" alt=""></div>
                         </div>
                     </div>
+                    <!-- Spinner -->
+                    <!-- <div id="loading" class="loading">
+                        <div class="spinner"></div>
+                    </div> -->
+                    <!-- Skeleton Loader -->
+                    <!-- <div id="loading" class="loading">
+                        <div class="skeleton-table">
+                            <div class="skeleton-row">
+                                <div class="skeleton-cell"></div>
+                                <div class="skeleton-cell"></div>
+                                <div class="skeleton-cell"></div>
+                                <div class="skeleton-cell"></div>
+                                <div class="skeleton-cell"></div>
+                                <div class="skeleton-cell"></div>
+                                <div class="skeleton-cell"></div>
+                            </div>
+                        </div>
+                    </div> -->
                     <div id="tblEmployee" class="main-body-table">
                         <table>
                             <thead>
@@ -201,21 +219,26 @@
                     </div>
                     <div class="main-body-bottom">
                         <div class="main-body-bottom-container">
-                            <div>
+                            <div class="horizontal-alignment">
                                 <span>Tổng:</span>
-                                <span class="text-bold">100</span>
+                                <div id="total" class="text-bold">100</div>
                             </div>
                             <div class="horizontal-alignment">
-                                <span>Số bản ghi/ trang</span>
-                                <div class="horizontal-alignment">
-                                    <span class="text-bold page-number">1</span>
-                                    <div><img class="icon1" src="assets/icon/New folder/icons8-chevron-down-26.png"
-                                            alt="">
-                                    </div>
+                                <span>Số bản ghi/ trang:</span>
+                                <div id="cbbRowNumber">
+                                    <label for="row-number">
+                                        <select name="options" id="options">
+                                            <option value="10">10</option>
+                                            <option value="50">50</option>
+                                            <option value="100">100</option>
+                                        </select>
+                                    </label>
                                 </div>
                                 <div class="horizontal-alignment">
-                                    <div><img class="icon icon2" src="assets/icon/btn-prev-page.svg" alt=""></div>
-                                    <div><img class="icon icon3" src="assets/icon/btn-next-page.svg" alt=""></div>
+                                    <div id="prevPage"><img class="icon icon2" src="assets/icon/btn-prev-page.svg"
+                                            alt=""></div>
+                                    <div id="nextPage"><img class="icon icon3" src="assets/icon/btn-next-page.svg"
+                                            alt=""></div>
                                 </div>
                             </div>
                         </div>
@@ -240,15 +263,13 @@
                             <div class="horizontal-alignment">
                                 <div class="vertical-alignment padding-right">
                                     <div>
-                                        <label for="id">Mã nhân viên</label>
-                                        <span class="text-red">*</span>
+                                        <label class="label-required" for="id">Mã nhân viên</label>
                                     </div>
                                     <input id="txtEmployeeCode" type="text" name="id" required>
                                 </div>
                                 <div class="vertical-alignment">
                                     <div>
-                                        <label for="name">Họ và tên </label>
-                                        <span class="text-red">*</span>
+                                        <label class="label-required" for="name">Họ và tên </label>
                                     </div>
                                     <input id="txtFullName" type="text" name="name" required>
                                 </div>
@@ -288,7 +309,8 @@
                             </div>
                             <div class="horizontal-alignment">
                                 <div class="vertical-alignment padding-right">
-                                    <label for="id-card-number" title="Số chứng minh thư nhân dân">Số CMTND</label>
+                                    <label for="id-card-number" class="label-required"
+                                        title="Số chứng minh thư nhân dân">Số CMTND</label>
                                     <input id="txtIdCardNumber" type="text" name="id-card-number" required>
                                 </div>
                                 <div class="vertical-alignment">
@@ -309,16 +331,16 @@
                     <div>
                         <div class="horizontal-alignment">
                             <div class="vertical-alignment padding-right">
-                                <label for="mobilephone-number">ĐT Di động</label>
-                                <input id="txtMobilephoneNumber" type="text" name="mobilephone-number">
+                                <label class="label-required" for="mobilephone-number">ĐT Di động</label>
+                                <input id="txtMobilephoneNumber" type="text" name="mobilephone-number" required>
                             </div>
                             <div class="vertical-alignment padding-right">
                                 <label for="landline-number">ĐT Cố định</label>
                                 <input id="txtLandlineNumber" type="text" name="landline-number">
                             </div>
                             <div class="vertical-alignment">
-                                <label for="email">Email</label>
-                                <input id="txtEmail" type="email" name="email">
+                                <label class="label-required" for="email">Email</label>
+                                <input id="txtEmail" type="email" name="email" required>
                             </div>
                         </div>
                         <div class="horizontal-alignment">
@@ -340,6 +362,7 @@
                 <div class="form-container-button">
                     <div class="horizontal-alignment">
                         <button type="button" id="btnCancel" class="btn button-cancel">Hủy</button>
+                        <button type="submit" id="btnUpdate" class="btn btn-green">Cập nhật</button>
                         <button type="submit" id="btnSave" class="btn btn-green">Cất</button>
                     </div>
                 </div>
