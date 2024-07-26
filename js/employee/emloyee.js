@@ -7,45 +7,47 @@ class EmployeePage {
   inputInvalids = [];
   arr = [];
 
-  constructor()
-  {
+  constructor() {
     // Pagination
     this.page = 1;
-    this.pageSize = 10; 
+    this.pageSize = 10;
     this.totalPages = 0;
     this.data = [];
 
     this.initEvents();
     this.loadData();
   }
-  
+
   /**
    * Khởi tạo các sự kiện trong page3
    * Author: DTSANG (06/07/2024)
    */
   initEvents() {
     var me = this;
-    try
-    { 
+    try {
       // Phân trang cho bảng:
       this.paginationTable();
 
       // Tìm kiếm:
-      document.querySelector(".search-input").addEventListener("input", this.searchTable);
+      document
+        .querySelector(".search-input")
+        .addEventListener("input", this.searchTable);
 
       // Click button add hiển thị form thêm mới:
       document
         .querySelector("#btnAdd")
         .addEventListener("click", () => this.btnAddOnClick(me));
-      
+
       // Lưu dữ liệu:
-      document.getElementById("btnSave").addEventListener("click", this.btnSaveOnClick.bind(this));
+      document
+        .getElementById("btnSave")
+        .addEventListener("click", this.btnSaveOnClick.bind(this));
 
       // Refresh dữ liệu:
       document
         .querySelector("#btnRefresh")
         .addEventListener("click", this.btnRefreshOnClick);
-      
+
       // Xuất dữ liệu trong bảng ra file excel:
       document
         .querySelector("#btnExport")
@@ -70,10 +72,10 @@ class EmployeePage {
         .addEventListener("click", function () {
           this.parentElement.parentElement.parentElement.parentElement.style.visibility =
             "hidden";
-          // 
+          //
           // me.inputInvalids[0].focus();
         });
-      
+
       // Hủy và ẩn form chi tiết:
       document
         .querySelector("[mdialog] .button-cancel")
@@ -81,16 +83,20 @@ class EmployeePage {
           document.querySelector("#dlgDetail").style.visibility = "hidden";
           me.resetForm();
         });
-      
+
       // Click button edit hiển thị form sửa thông tin nhân viên:
-      document.querySelector("#tblEmployee tbody")
-        .addEventListener("click", function (event)
-        {
-        if (event.target && event.target.matches("button.btnEdit")) {
-          const employeeId = event.target.getAttribute("data-id");
-          me.btnEditOnClick(employeeId); 
-          document.getElementById("btnUpdate").addEventListener("click", ()=> {me.btnUpdateOnClick(employeeId)});
-        }
+      document
+        .querySelector("#tblEmployee tbody")
+        .addEventListener("click", function (event) {
+          if (event.target && event.target.matches("button.btnEdit")) {
+            const employeeId = event.target.getAttribute("data-id");
+            me.btnEditOnClick(employeeId);
+            document
+              .getElementById("btnUpdate")
+              .addEventListener("click", () => {
+                me.btnUpdateOnClick(employeeId);
+              });
+          }
         });
       // Cập nhật dữ liệu:
       // document.getElementById("btnUpdate").addEventListener("click", this.btnUpdateOnClick.bind(this));
@@ -100,22 +106,22 @@ class EmployeePage {
         .querySelector("#tblEmployee tbody")
         .addEventListener("click", function (event) {
           if (event.target && event.target.matches("button.btnDelete")) {
+            debugger;
             const employeeId = event.target.getAttribute("data-id");
             me.btnDeleteOnClick(employeeId);
           }
         });
       // Thêm * vào các label required
-      document.addEventListener("DOMContentLoaded", function ()
-      {
-        debugger
-                const labels = document.querySelectorAll('label[for]');
-            
-                labels.forEach(label => {
-                    const input = document.getElementById(label.getAttribute('for'));
-                    if (input && input.hasAttribute('required')) {
-                        label.classList.add('label-required');
-                    }
-                });
+      document.addEventListener("DOMContentLoaded", function () {
+        debugger;
+        const labels = document.querySelectorAll("label[for]");
+
+        labels.forEach((label) => {
+          const input = document.getElementById(label.getAttribute("for"));
+          if (input && input.hasAttribute("required")) {
+            label.classList.add("label-required");
+          }
+        });
       });
       // ...
     } catch (error) {
@@ -127,19 +133,17 @@ class EmployeePage {
    * Author: DTSANG (06/07/2024)
    */
   async loadData() {
-    try
-    {
+    try {
       // Gọi api lấy dữ liệu:
       const res = await fetch("https://cukcuk.manhnv.net/api/v1/Employees");
       const data = await res.json();
       this.data = data;
       this.totalPages = Math.ceil(this.data.length / this.pageSize);
-      
+
       // Cập nhật số lượng bản ghi
       document.querySelector("#total").textContent = `${this.data.length}`;
-      
-      this.updateTable();
 
+      this.updateTable();
     } catch (error) {
       console.error(error);
     }
@@ -148,52 +152,56 @@ class EmployeePage {
    * Update the data on the table
    * Author: DTSANG(23/07/2024)
    */
-  updateTable()
-  {
+  updateTable() {
     try {
-    // Lấy ra table:
-    const table = document.querySelector("#tblEmployee");
-    const tbody = table.querySelector("tbody");
-    // Xóa tất cả các hàng hiện tại 
-    tbody.innerHTML = "";
+      // Lấy ra table:
+      const table = document.querySelector("#tblEmployee");
+      const tbody = table.querySelector("tbody");
+      // Xóa tất cả các hàng hiện tại
+      tbody.innerHTML = "";
 
-    const start = (this.page - 1) * this.pageSize;
-    const end = start + this.pageSize;
-    const paginatedData = this.data.slice(start, end);
+      const start = (this.page - 1) * this.pageSize;
+      const end = start + this.pageSize;
+      const paginatedData = this.data.slice(start, end);
 
-    let number = start;
-    // Duyệt từng phần tử trong data:
-    paginatedData.forEach((item) => {
-      number++;
-      let tr = document.createElement("tr");
-      let gender = item.GenderName;
-      switch (gender)
-      {
-        case "Nam":
-          gender = "Nam";
-          break;
-        case "Nữ":
-          gender = "Nữ";
-          break;
-        default:
-          gender = "Chưa xác định";
-          break;
-      }
-      // Tạo nội dung cho các ô
-      tr.innerHTML = `<td>${number}</td>
+      let number = start;
+      // Duyệt từng phần tử trong data:
+      paginatedData.forEach((item) => {
+        number++;
+        let tr = document.createElement("tr");
+        let gender = item.GenderName;
+        switch (gender) {
+          case "Nam":
+            gender = "Nam";
+            break;
+          case "Nữ":
+            gender = "Nữ";
+            break;
+          default:
+            gender = "Chưa xác định";
+            break;
+        }
+        // Tạo nội dung cho các ô
+        tr.innerHTML = `<td>${number}</td>
                       <td>${item.EmployeeCode}</td>
                       <td>${item.FullName}</td>
                       <td>${gender}</td>
-                      <td>${new Date(item.DateOfBirth).toLocaleDateString()}</td>
+                      <td>${new Date(
+                        item.DateOfBirth
+                      ).toLocaleDateString()}</td>
                       <td>${item.Email}</td>
-                      <td><div class="horizontal-alignment">${item.Address}
-                        <div class="button-container horizontal-alignment">
-                          <button class="btnEdit" data-id="${item.EmployeeId}"></button>
-                          <button class="btnDelete" data-id1="${item.EmployeeId}"></button>
+                      <td><div class="horizontal-alignment-center">${item.Address}
+                        <div class="button-container horizontal-alignment-center">
+                          <button class="btnEdit" data-id="${
+                            item.EmployeeId
+                          }"></button>
+                          <button class="btnDelete" data-id="${
+                            item.EmployeeId
+                          }"></button>
                         </div>
                       </div></td>`;
-      tbody.append(tr);
-    });
+        tbody.append(tr);
+      });
     } catch (error) {
       console.error(error);
     }
@@ -203,15 +211,16 @@ class EmployeePage {
    * Pagination for the table
    * Author: DTSANG (23/07/2024)
    */
-  paginationTable()
-  {
+  paginationTable() {
     try {
-    // Thay đổi số lượng bảng ghi/trang:
-      document.querySelector("#cbbRowNumber").addEventListener("change", (e) => {
-      this.pageSize = parseInt(e.target.value);
-      this.page = 1; // Reset to first page
-      this.updateTable();
-      });
+      // Thay đổi số lượng bảng ghi/trang:
+      document
+        .querySelector("#cbbRowNumber")
+        .addEventListener("change", (e) => {
+          this.pageSize = parseInt(e.target.value);
+          this.page = 1; // Reset to first page
+          this.updateTable();
+        });
       // Quay về trang trước đó:
       document.querySelector("#prevPage").addEventListener("click", () => {
         if (this.page > 1) {
@@ -226,7 +235,6 @@ class EmployeePage {
           this.updateTable();
         }
       });
-        
     } catch (error) {
       console.error(error);
     }
@@ -236,23 +244,22 @@ class EmployeePage {
    * Search data on the table
    * Author: DTSANG (19/07/2024)
    */
-  searchTable()
-  {
+  searchTable() {
     try {
-    const table_rows = document.querySelectorAll("tbody tr");
-    const search = document.querySelector(".search-input");
-    const search_data = search.value.toLowerCase();
+      const table_rows = document.querySelectorAll("tbody tr");
+      const search = document.querySelector(".search-input");
+      const search_data = search.value.toLowerCase();
 
-  table_rows.forEach((row) => {
-    let table_data = row.textContent.toLowerCase();
-    if (table_data.indexOf(search_data) < 0) {
-      // Ẩn hoàn toàn hàng không khớp
-      row.style.display = "none";
-    } else {
-      // Hiển thị lại các hàng khớp
-      row.style.display = "";
-    }
-  });   
+      table_rows.forEach((row) => {
+        let table_data = row.textContent.toLowerCase();
+        if (table_data.indexOf(search_data) < 0) {
+          // Ẩn hoàn toàn hàng không khớp
+          row.style.display = "none";
+        } else {
+          // Hiển thị lại các hàng khớp
+          row.style.display = "";
+        }
+      });
     } catch (error) {
       console.error(error);
     }
@@ -263,9 +270,8 @@ class EmployeePage {
    * Author: DTSANG (06/07/2024)
    */
   btnAddOnClick() {
-    try
-    {
-      debugger
+    try {
+      debugger;
       // Hiển thị form thêm mới
       // 1. Lấy ra element của form thêm mới:
       const dialog = document.getElementById("dlgDetail");
@@ -273,7 +279,6 @@ class EmployeePage {
       dialog.style.visibility = "visible";
       // 3. Focus vào ô input đầu tiên
       document.getElementById("txtEmployeeCode").focus();
-      
     } catch (error) {
       console.error(error);
     }
@@ -284,80 +289,92 @@ class EmployeePage {
    * Author: DTSANG (23/07/2024)
    */
   async btnEditOnClick(EmployeeId) {
-    try
-    {
-    debugger
-    // Hiển thị form sửa thông tin nhân viên
-    const dialog = document.getElementById("dlgDetail");
-    dialog.style.visibility = "visible";
+    try {
+      debugger;
+      // Hiển thị form sửa thông tin nhân viên
+      const dialog = document.getElementById("dlgDetail");
+      dialog.style.visibility = "visible";
 
-    // Lấy dữ liệu nhân viên từ API
-    const res = await fetch(`https://cukcuk.manhnv.net/api/v1/Employees/${EmployeeId}`);
-    const employee = await res.json();
+      // Lấy dữ liệu nhân viên từ API
+      const res = await fetch(
+        `https://cukcuk.manhnv.net/api/v1/Employees/${EmployeeId}`
+      );
+      const employee = await res.json();
 
-    // Cập nhật các trường trong dialog với thông tin từ nhân viên
-    document.getElementById("txtEmployeeCode").value = employee.EmployeeCode || "";
-    document.getElementById("txtFullName").value = employee.FullName || "";
-    document.getElementById("txtPosition").value = employee.PositionName || "";
-    document.getElementById("txtDepartment").value = employee.DepartmentName || "";
-    document.getElementById("dtDateOfBirth").value = employee.DateOfBirth ? new Date(employee.DateOfBirth).toISOString().split('T')[0] : "";
-    let gender = employee.GenderName;
-    switch (gender)
-    {
-      case "Nam":
-        document.getElementById("rdoMale").checked = true;
-        break;
-      case "Nữ":
-        document.getElementById("rdoFemale").checked = true;
-        break;
-      default:
-        document.getElementById("rdoOther").checked = true;
-        break;
+      // Cập nhật các trường trong dialog với thông tin từ nhân viên
+      document.getElementById("txtEmployeeCode").value =
+        employee.EmployeeCode || "";
+      document.getElementById("txtFullName").value = employee.FullName || "";
+      document.getElementById("txtPosition").value =
+        employee.PositionName || "";
+      document.getElementById("txtDepartment").value =
+        employee.DepartmentName || "";
+      document.getElementById("dtDateOfBirth").value = employee.DateOfBirth
+        ? new Date(employee.DateOfBirth).toISOString().split("T")[0]
+        : "";
+      let gender = employee.GenderName;
+      switch (gender) {
+        case "Nam":
+          document.getElementById("rdoMale").checked = true;
+          break;
+        case "Nữ":
+          document.getElementById("rdoFemale").checked = true;
+          break;
+        default:
+          document.getElementById("rdoOther").checked = true;
+          break;
+      }
+      document.getElementById("txtIdCardNumber").value =
+        employee.IdentityNumber || "";
+      document.getElementById("dtIssuedDate").value = employee.IdentityDate
+        ? new Date(employee.IdentityDate).toISOString().split("T")[0]
+        : "";
+      document.getElementById("txtIssuedLocation").value =
+        employee.IdentityPlace || "";
+      document.getElementById("txtAddress").value = employee.Address || "";
+      document.getElementById("txtMobilephoneNumber").value =
+        employee.PhoneNumber || "";
+      document.getElementById("txtLandlineNumber").value =
+        employee.LandlineNumber || "";
+      document.getElementById("txtEmail").value = employee.Email || "";
+      document.getElementById("txtBankAccount").value =
+        employee.BankAccount || "";
+      document.getElementById("txtBankName").value = employee.BankName || "";
+      document.getElementById("txtBankBranch").value =
+        employee.BankBranch || "";
+
+      // Focus vào ô input đầu tiên
+      document.getElementById("txtEmployeeCode").focus();
+    } catch (error) {
+      console.error(error);
     }
-    document.getElementById("txtIdCardNumber").value = employee.IdentityNumber || "";
-    document.getElementById("dtIssuedDate").value = employee.IdentityDate ? new Date(employee.IdentityDate).toISOString().split('T')[0] : "";
-    document.getElementById("txtIssuedLocation").value = employee.IdentityPlace || "";
-    document.getElementById("txtAddress").value = employee.Address || "";
-    document.getElementById("txtMobilephoneNumber").value = employee.PhoneNumber || "";
-    document.getElementById("txtLandlineNumber").value = employee.LandlineNumber || "";
-    document.getElementById("txtEmail").value = employee.Email || "";
-    document.getElementById("txtBankAccount").value = employee.BankAccount || "";
-    document.getElementById("txtBankName").value = employee.BankName || "";
-    document.getElementById("txtBankBranch").value = employee.BankBranch || "";
-
-    // Focus vào ô input đầu tiên
-    document.getElementById("txtEmployeeCode").focus();
-  } catch (error) {
-    console.error(error);
   }
-}
 
   /**
    * Click button delete
    * Author: DTSANG (18/07/2024)
    */
-  btnDeleteOnClick(EmployeeId)
-  {
+  btnDeleteOnClick(EmployeeId) {
     try {
-    if (confirm("Bạn có chắc chắn muốn xóa nhân viên này không?")) {
-      console.log(`Deleting employee with code: ${EmployeeId}`);
-      fetch(`https://cukcuk.manhnv.net/api/v1/Employees/${EmployeeId}`, {
-        method: "DELETE",
-      })
-        .then((response) => {
-          if (!response.ok) {
-            return response.text().then((text) => {
-              throw new Error(`Failed to delete employee: ${text}`);
-            });
-          }
-          console.log("Employee deleted successfully");
-          this.loadData(); // Tải lại dữ liệu sau khi xóa thành công
+      debugger;
+      if (confirm("Bạn có chắc chắn muốn xóa nhân viên này không?")) {
+        console.log(`Deleting employee with code: ${EmployeeId}`);
+        fetch(`https://cukcuk.manhnv.net/api/v1/Employees/${EmployeeId}`, {
+          method: "DELETE",
         })
-        .catch((error) => {
-          console.error("Error deleting employee:", error);
-        });
+          .then((response) => {
+            if (!response.ok) {
+              return response.text().then((text) => {
+                throw new Error(`Failed to delete employee: ${text}`);
+              });
+            }
+            console.log("Employee deleted successfully");
+            this.loadData(); // Tải lại dữ liệu sau khi xóa thành công
+          })
+          .catch((error) => {
+            console.error("Error deleting employee:", error);
+          });
       }
-        
     } catch (error) {
       console.error(error);
     }
@@ -407,9 +424,12 @@ class EmployeePage {
       // Thực hiện validate dữ liệu:
       const validateData = this.validateData();
       // check input required:
-      if (!validateData.requiredValid || !validateData.dateValid || !validateData.emailValid)
-      {
-        debugger
+      if (
+        !validateData.requiredValid ||
+        !validateData.dateValid ||
+        !validateData.emailValid
+      ) {
+        debugger;
         let dialogNotice = document.querySelector(".m-dialog.dialog-notice");
         // Hiển thị thông báo lên:
         dialogNotice.style.visibility = "visible";
@@ -423,8 +443,7 @@ class EmployeePage {
         errorElement.innerHTML = "";
 
         // Duyệt từng nội dung thông báo và append:
-        for (const Msg of validateData.Msgs)
-        {
+        for (const Msg of validateData.Msgs) {
           // <li> ... </li>
           let li = document.createElement("li");
           li.textContent = Msg;
@@ -436,16 +455,16 @@ class EmployeePage {
         // ...
         // -> nếu dữ liệu đã hợp lệ hết thì gọi api thục hiện thêm mới:
         // Nếu dữ liệu hợp lệ, thực hiện gửi dữ liệu đến API
-        debugger
+        debugger;
         let genderName = null;
-          if (document.getElementById("rdoMale").checked === true) {
-            genderName = "Nam";
-          } else if (document.getElementById("rdoFemale").checked = true) {
-            genderName = "Nữ";
-          } else {
-            genderName = "Chưa xác định";
-          }
-        
+        if (document.getElementById("rdoMale").checked === true) {
+          genderName = "Nam";
+        } else if ((document.getElementById("rdoFemale").checked = true)) {
+          genderName = "Nữ";
+        } else {
+          genderName = "Chưa xác định";
+        }
+
         let employeeData = {
           EmployeeCode: document.getElementById("txtEmployeeCode").value,
           FullName: document.getElementById("txtFullName").value,
@@ -457,7 +476,8 @@ class EmployeePage {
           IdentityNumber: document.getElementById("txtIdCardNumber").value,
           IdentityDate: document.getElementById("dtIssuedDate").value,
           IdentityPlace: document.getElementById("txtIssuedLocation").value,
-          MobilephoneNumber: document.getElementById("txtMobilephoneNumber").value,
+          MobilephoneNumber: document.getElementById("txtMobilephoneNumber")
+            .value,
           LandlineNumber: document.getElementById("txtLandlineNumber").value,
           Email: document.getElementById("txtEmail").value,
           BankAccount: document.getElementById("txtBankAccount").value,
@@ -474,7 +494,7 @@ class EmployeePage {
           },
           body: JSON.stringify(employeeData),
         })
-          .then(response => {
+          .then((response) => {
             if (!response.ok) {
               return response.json().then((error) => {
                 throw new Error(error.message || "Lỗi không xác định");
@@ -515,9 +535,12 @@ class EmployeePage {
       // Thực hiện validate dữ liệu:
       const validateData = this.validateData();
       // check input required:
-      if (!validateData.requiredValid || !validateData.dateValid || !validateData.emailValid)
-      {
-        debugger
+      if (
+        !validateData.requiredValid ||
+        !validateData.dateValid ||
+        !validateData.emailValid
+      ) {
+        debugger;
         let dialogNotice = document.querySelector(".m-dialog.dialog-notice");
         // Hiển thị thông báo lên:
         dialogNotice.style.visibility = "visible";
@@ -531,8 +554,7 @@ class EmployeePage {
         errorElement.innerHTML = "";
 
         // Duyệt từng nội dung thông báo và append:
-        for (const Msg of validateData.Msgs)
-        {
+        for (const Msg of validateData.Msgs) {
           // <li> ... </li>
           let li = document.createElement("li");
           li.textContent = Msg;
@@ -544,7 +566,7 @@ class EmployeePage {
         // ...
         // -> nếu dữ liệu đã hợp lệ hết thì gọi api thục hiện thêm mới:
         // Nếu dữ liệu hợp lệ, thực hiện gửi dữ liệu đến API
-
+        debugger;
         const genderElement = document.querySelector("input[name=\"gender\"]:checked");
 
         let genderValue = null;
@@ -557,14 +579,7 @@ class EmployeePage {
             genderValue = 2;
           }
         }
-        // let genderName = null;
-        //   if (document.getElementById("rdoMale").checked === true) {
-        //     genderName = "Nam";
-        //   } else if (document.getElementById("rdoFemale").checked = true) {
-        //     genderName = "Nữ";
-        //   } else {
-        //     genderName = "Chưa xác định";
-        //   }
+      
         let employeeData = {
           EmployeeCode: document.getElementById("txtEmployeeCode").value,
           FullName: document.getElementById("txtFullName").value,
@@ -576,7 +591,8 @@ class EmployeePage {
           IdentityNumber: document.getElementById("txtIdCardNumber").value,
           IdentityDate: document.getElementById("dtIssuedDate").value,
           IdentityPlace: document.getElementById("txtIssuedLocation").value,
-          MobilephoneNumber: document.getElementById("txtMobilephoneNumber").value,
+          MobilephoneNumber: document.getElementById("txtMobilephoneNumber")
+            .value,
           LandlineNumber: document.getElementById("txtLandlineNumber").value,
           Email: document.getElementById("txtEmail").value,
           BankAccount: document.getElementById("txtBankAccount").value,
@@ -593,7 +609,7 @@ class EmployeePage {
           },
           body: JSON.stringify(employeeData),
         })
-          .then(response => {
+          .then((response) => {
             if (!response.ok) {
               return response.json().then((error) => {
                 throw new Error(error.message || "Lỗi không xác định");
@@ -639,9 +655,12 @@ class EmployeePage {
       // Thực hiện validate dữ liệu:
       const validateData = this.validateData();
       // check input required:
-      if (!validateData.requiredValid || !validateData.dateValid || !validateData.emailValid)
-      {
-        debugger
+      if (
+        !validateData.requiredValid ||
+        !validateData.dateValid ||
+        !validateData.emailValid
+      ) {
+        debugger;
         let dialogNotice = document.querySelector(".m-dialog.dialog-notice");
         // Hiển thị thông báo lên:
         dialogNotice.style.visibility = "visible";
@@ -655,8 +674,7 @@ class EmployeePage {
         errorElement.innerHTML = "";
 
         // Duyệt từng nội dung thông báo và append:
-        for (const Msg of validateData.Msgs)
-        {
+        for (const Msg of validateData.Msgs) {
           // <li> ... </li>
           let li = document.createElement("li");
           li.textContent = Msg;
@@ -667,8 +685,10 @@ class EmployeePage {
       } else {
         // ...
         // Nếu dữ liệu hợp lệ, thực hiện cập nhật dữ liệu lên API:
-        debugger
-        const genderElement = document.querySelector("input[name=\"gender\"]:checked");
+        debugger;
+        const genderElement = document.querySelector(
+          'input[name="gender"]:checked'
+        );
 
         let genderValue = null;
         if (genderElement) {
@@ -691,7 +711,8 @@ class EmployeePage {
           IdentityNumber: document.getElementById("txtIdCardNumber").value,
           IdentityDate: document.getElementById("dtIssuedDate").value,
           IdentityPlace: document.getElementById("txtIssuedLocation").value,
-          MobilephoneNumber: document.getElementById("txtMobilephoneNumber").value,
+          MobilephoneNumber: document.getElementById("txtMobilephoneNumber")
+            .value,
           LandlineNumber: document.getElementById("txtLandlineNumber").value,
           Email: document.getElementById("txtEmail").value,
           BankAccount: document.getElementById("txtBankAccount").value,
@@ -708,7 +729,7 @@ class EmployeePage {
           },
           body: JSON.stringify(employeeData),
         })
-          .then(response => {
+          .then((response) => {
             if (!response.ok) {
               return response.json().then((error) => {
                 throw new Error(error.message || "Lỗi không xác định");
@@ -749,41 +770,39 @@ class EmployeePage {
    * Validate data
    * Author: DTSANG (06/07/2024)
    */
-  validateData()
-  {
+  validateData() {
     try {
-    let error = {
-      requiredValid: false,
-      dateValid: false,
-      emailValid: false,
-      inputInvalid: [],
-      Msgs: [],
-    };
-    // check required input
-    let requiredError = this.checkRequiredInput();
-    error.requiredValid = requiredError.requiredValid;
-    error.Msgs.push(...requiredError.Msgs);
-    // check date input:
-    let dateError = this.checkDateValidity();
-    error.dateValid = dateError.dateValid;
-    error.Msgs.push(...dateError.Msgs);
-    // check email input:
-    let emailError = this.checkEmailFormat();
-    error.emailValid = emailError.emailValid;
-    error.Msgs.push(...emailError.Msgs);
+      let error = {
+        requiredValid: false,
+        dateValid: false,
+        emailValid: false,
+        inputInvalid: [],
+        Msgs: [],
+      };
+      // check required input
+      let requiredError = this.checkRequiredInput();
+      error.requiredValid = requiredError.requiredValid;
+      error.Msgs.push(...requiredError.Msgs);
+      // check date input:
+      let dateError = this.checkDateValidity();
+      error.dateValid = dateError.dateValid;
+      error.Msgs.push(...dateError.Msgs);
+      // check email input:
+      let emailError = this.checkEmailFormat();
+      error.emailValid = emailError.emailValid;
+      error.Msgs.push(...emailError.Msgs);
       return error;
     } catch (error) {
       console.error(error);
     }
   }
-  
+
   /**
    * Check input required
    * Author: DTSANG (06/07/2024)
    */
   checkRequiredInput() {
-    try
-    {
+    try {
       let result = {
         requiredValid: false,
         inputInvalid: [],
@@ -795,26 +814,26 @@ class EmployeePage {
         const value = input.value;
         if (value === "" || value === null || value === undefined) {
           const label = input.previousElementSibling;
-          if (!input.classList.contains('input-invalid')) {
+          if (!input.classList.contains("input-invalid")) {
             input.classList.add("input-invalid");
-            this.addErrorElementToInputNotValid(input, "Thông tin này không được phép để trống");
-          } 
+            this.addErrorElementToInputNotValid(
+              input,
+              "Thông tin này không được phép để trống"
+            );
+          }
           result.inputInvalid.push(input);
           result.Msgs.push(`${label.textContent} không được phép để trống`);
-        } else
-        {
-          if (input.classList.contains('input-invalid'))
-          {
+        } else {
+          if (input.classList.contains("input-invalid")) {
             input.classList.remove("input-invalid");
             input.nextElementSibling.remove();
             this.removeErrorElementFromInput(input);
-          }  
+          }
         }
       }
       if (result.inputInvalid.length === 0) {
-            result.requiredValid = true;
-      } else
-      {
+        result.requiredValid = true;
+      } else {
         result.requiredValid = false;
       }
       return result;
@@ -827,44 +846,46 @@ class EmployeePage {
    * Check email
    * Author: DTSANG (06/07/2024)
    */
-  checkEmailFormat()
-  {
-      try {
+  checkEmailFormat() {
+    try {
       let result = {
         emailValid: false,
         inputInvalid: [],
         Msgs: [],
       };
-    let inputs = document.querySelectorAll("#dlgDetail input[type='email']");
+      let inputs = document.querySelectorAll("#dlgDetail input[type='email']");
       for (const input of inputs) {
-    const value = input.value;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(value) && value !=="")
+        const value = input.value;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (value !== "")
         {
+          if (!emailRegex.test(value)) {
           const label = input.previousElementSibling;
           if (!input.classList.contains("input-invalid")) {
             input.classList.add("input-invalid");
-            this.addErrorElementToInputNotValid(input, `${label.textContent} không đúng định dạng`);
-          } 
+            this.addErrorElementToInputNotValid(
+              input,
+              `${label.textContent} không đúng định dạng`
+            );
+          }
           result.inputInvalid.push(input);
           result.Msgs.push(`${label.textContent} không đúng định dạng`);
-        } else
-        {
-          if (input.classList.contains('input-invalid'))
-          {
+        } else {
+          if (input.classList.contains("input-invalid")) {
             input.classList.remove("input-invalid");
             input.nextElementSibling.remove();
             this.removeErrorElementFromInput(input);
           }
-    }
-    }
-    if (result.inputInvalid.length === 0) {
-            result.emailValid = true;
-      } else
-      {
+        }
+      }
+        }
+        
+      if (result.inputInvalid.length === 0) {
+        result.emailValid = true;
+      } else {
         result.emailValid = false;
-    }
-        return result;
+      }
+      return result;
     } catch (error) {
       console.error(error);
     }
@@ -874,48 +895,48 @@ class EmployeePage {
    * Check date
    * Author: DTSANG (06/07/2024)
    */
-  checkDateValidity()
-  {
-    try{
-    let result = {
+  checkDateValidity() {
+    try {
+      let result = {
         dateValid: false,
         inputInvalid: [],
         Msgs: [],
       };
-    let inputs = document.querySelectorAll("#dlgDetail input[type='date']");
+      let inputs = document.querySelectorAll("#dlgDetail input[type='date']");
       for (const input of inputs) {
-    const value = input.value;
-    const currentDate = new Date().toISOString().split("T")[0]; // Ngày hiện tại ở định dạng YYYY-MM-DD
-        if (value > currentDate)
-        {
+        const value = input.value;
+        const currentDate = new Date().toISOString().split("T")[0]; // Ngày hiện tại ở định dạng YYYY-MM-DD
+        if (value > currentDate) {
           const label = input.previousElementSibling;
           if (!input.classList.contains("input-invalid")) {
             input.classList.add("input-invalid");
-            this.addErrorElementToInputNotValid(input, `${label.textContent} không được lớn hơn ngày hiện tại`);
-          } 
+            this.addErrorElementToInputNotValid(
+              input,
+              `${label.textContent} không được lớn hơn ngày hiện tại`
+            );
+          }
           result.inputInvalid.push(input);
-          result.Msgs.push(`${label.textContent} không được lớn hơn ngày hiện tại`);
-        } else
-        {
-          if (input.classList.contains('input-invalid'))
-          {
+          result.Msgs.push(
+            `${label.textContent} không được lớn hơn ngày hiện tại`
+          );
+        } else {
+          if (input.classList.contains("input-invalid")) {
             input.classList.remove("input-invalid");
             input.nextElementSibling.remove();
             this.removeErrorElementFromInput(input);
           }
-    }
-    }
-    if (result.inputInvalid.length === 0) {
-            result.dateValid = true;
-      } else
-      {
+        }
+      }
+      if (result.inputInvalid.length === 0) {
+        result.dateValid = true;
+      } else {
         result.dateValid = false;
-    }
+      }
       return result;
     } catch (error) {
       console.error(error);
     }
-    }
+  }
 
   /**
    * Add error message to input not valid
@@ -939,30 +960,24 @@ class EmployeePage {
    * Author: DTSANG (23/07/2024)
    */
 
-  removeErrorElementFromInput(input)
-  {
-    try
-    {
+  removeErrorElementFromInput(input) {
+    try {
       //Xóa thông báo lỗi khỏi phần tử input
       input.style.borderColor = "";
       let errorElement = input.nextElementSibling;
-      if (errorElement && errorElement.classList.contains("error-message"))
-      {
+      if (errorElement && errorElement.classList.contains("error-message")) {
         errorElement.remove();
       }
-    } catch (error)
-    {
+    } catch (error) {
       console.error(error);
     }
   }
-    /**
-     * Reset các input fields và thông báo lỗi
-     * Author: DTSANG (23/07/2024)
-     */
-  resetForm()
-  {
-    try
-    {
+  /**
+   * Reset các input fields và thông báo lỗi
+   * Author: DTSANG (23/07/2024)
+   */
+  resetForm() {
+    try {
       document.getElementById("txtEmployeeCode").value = "";
       document.getElementById("txtFullName").value = "";
       document.getElementById("txtPosition").value = "";
@@ -981,18 +996,15 @@ class EmployeePage {
       document.getElementById("txtBankBranch").value = "";
       // Xóa bỏ thông báo lỗi
       let inputs = document.querySelectorAll("#dlgDetail input");
-      for (const input of inputs)
-      {
-        if (input.classList.contains('input-invalid'))
-        {
+      for (const input of inputs) {
+        if (input.classList.contains("input-invalid")) {
           input.classList.remove("input-invalid");
           input.nextElementSibling.remove();
           this.removeErrorElementFromInput(input);
         }
       }
       //.....
-    } catch (error)
-    {
+    } catch (error) {
       console.error(error);
     }
   }

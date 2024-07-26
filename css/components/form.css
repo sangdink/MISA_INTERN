@@ -40,10 +40,16 @@
 .padding-no {
   padding: 0;
 }
-.padding-right {
+.padding-right-8px {
   padding-right: 8px;
 }
 .horizontal-alignment {
+  width: 100%;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+.horizontal-alignment-center {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -55,7 +61,7 @@
 .form-container-button .btn-green {
   margin-left: 12px;
 }
-.form-control > .horizontal-alignment > .vertical-alignment:first-child {
+.padding-right-24px {
   padding-right: 24px;
 }
 .form-control input {
@@ -86,8 +92,7 @@ input[type="radio"] {
 }
 .input-invalid {
   color: red;
-  /* border-color: #50b83c; */
-  /* border-color: #ff4747; */
+  padding-top: 8px;
 }
 
 /* DIALOG */
