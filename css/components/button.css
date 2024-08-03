@@ -15,10 +15,9 @@
 .btn-icon {
   display: flex;
   align-items: center;
-  margin-right: 4px;
 }
 .btn-green:hover {
-  background-color: #124009;
+  background-color: #118044;
 }
 
 .btn-green:active {
@@ -80,4 +79,10 @@
 }
 tbody tr:hover .button-container {
   visibility: visible;
+}
+#prevPage {
+  cursor: pointer;
+}
+#nextPage {
+  cursor: pointer;
 }

@@ -6,19 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
     <div class="container">
         <header>
             <div class="header-container-left">
-                <div><img class="icon" src="assets/img/toggle.png" alt=""></div>
+                <div><img class="icon toggle" src="assets/img/toggle.png" alt=""></div>
                 <div><img class="header-logo" src="assets/img/cukcuk-logo.png" alt=""></div>
                 <div class="header-combobox-container">
                     <label for="location">
-                        <select name="options" id="options">
+                        <select name="options" id="cbbCompanyBranch">
                             <option value="HaNoi">Chi nhánh Hà Nội</option>
                             <option value="HoChiMinh">Chi nhánh Hồ Chí Minh</option>
                             <option value="DaNang">Chi nhánh Đà Nẵng</option>
@@ -33,7 +31,7 @@
                     <div>Đinh Thanh Sáng</div>
                 </div>
                 <div class="icon ellipsis-h">
-                    <i class="fas fa-ellipsis-h"></i>
+                    <img src="assets/icon/icons8-ellipsis-24.png" alt="">
                 </div>
             </div>
         </header>
@@ -65,8 +63,8 @@
             <div id="employee" class="menu-item">
                 <div class="main-header">
                     <h1>Quản lý nhân viên</h1>
-                    <button id="btnAdd" class="btn btn-green btn-icon"><img class="icon" src="assets/icon/add.png"
-                            alt="">
+                    <button id="btnAdd" class="btn btn-green btn-icon"><img class="icon btn-img"
+                            src="assets/icon/add.png" alt="">
                         <div>Thêm mới</div>
                     </button>
                 </div>
@@ -98,12 +96,12 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>dấldjglkagass</td>
-                                    <td>dấldjglkagass</td>
-                                    <td>dấldjglkagass</td>
-                                    <td>dấldjglkagass</td>
-                                    <td>dấldjglkagass</td>
-                                    <td>dấldjglkagass</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
                                     <td class="actions-cell"></td>
                                 </tr>
                                 <tr>
@@ -246,9 +244,11 @@
                                 <div id="cbbRowNumber">
                                     <label for="row-number">
                                         <select name="options" id="options">
-                                            <option value="10">10</option>
+                                            <option value="15">15</option>
                                             <option value="50">50</option>
                                             <option value="100">100</option>
+                                            <option value="500">500</option>
+                                            <option value="1000">1000</option>
                                         </select>
                                     </label>
                                 </div>
@@ -267,7 +267,7 @@
         </div>
     </div>
 
-    <!-- DIALOG -->
+    <!-- DIALOG THÊM MỚI NHÂN VIÊN-->
     <div id="dlgDetail" mdialog class="m-dialog">
         <div class="form-container">
             <div class="form-content">
@@ -279,29 +279,29 @@
                     <div class="horizontal-alignment">
                         <div class="vertical-alignment padding-right-8px">
                             <label class="label-required" for="id">Mã nhân viên</label>
-                            <input id="txtEmployeeCode" type="text" name="id" required>
+                            <input type="text" name="id" class="txtEmployeeCode disabled" required>
                         </div>
                         <div class="vertical-alignment padding-right-24px">
                             <label class="label-required" for="name">Họ và tên </label>
-                            <input id="txtFullName" type="text" name="name" required>
+                            <input type="text" class="txtFullName" name="name" required>
                         </div>
                         <div class="vertical-alignment padding-right-8px">
                             <label for="date-of-birth">Ngày sinh</label>
-                            <input id="dtDateOfBirth" type="date" class="input-date" name="date-of-birth">
+                            <input type="date" class="dtDateOfBirth input-date" name="date-of-birth">
                         </div>
                         <div class="vertical-alignment">
                             <label for="gender">Giới tính</label>
                             <div class="horizontal-alignment">
                                 <div class="horizontal-alignment-center">
-                                    <input id="rdoMale" type="radio" name="gender" id="" value="male" checked>
+                                    <input type="radio" name="gender" class="rdoMale" value="male" checked>
                                     <label for="male">Nam</label>
                                 </div>
                                 <div class="horizontal-alignment-center">
-                                    <input id="rdoFemale" type="radio" name="gender" id="" value="female">
+                                    <input type="radio" name="gender" class="rdoFemale" value="female">
                                     <label for="male">Nữ</label>
                                 </div>
                                 <div class="horizontal-alignment-center">
-                                    <input id="rdoOther" type="radio" name="gender" id="" value="other">
+                                    <input type="radio" name="gender" class="rdoOther" value="other">
                                     <label for="male">Khác</label>
                                 </div>
                             </div>
@@ -310,68 +310,203 @@
                     <div class="horizontal-alignment">
                         <div class="vertical-alignment padding-right-24px">
                             <label for="position">Vị trí</label>
-                            <input id="txtPosition" type="text" name="position">
+                            <select name="position" class="cbbPosition">
+                                <option value=""></option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                                <option value="500">500</option>
+                                <option value="1000">1000</option>
+                            </select>
                         </div>
                         <div class="horizontal-alignment">
                             <div class="vertical-alignment padding-right-8px">
                                 <label for="id-card-number" class="label-required" title="Số chứng minh thư nhân dân">Số
                                     CMTND</label>
-                                <input id="txtIdCardNumber" type="text" name="id-card-number" required>
+                                <input type="text" name="id-card-number" class="txtIdCardNumber" required>
                             </div>
                             <div class="vertical-alignment">
                                 <label for="issued-date">Ngày cấp</label>
-                                <input id="dtIssuedDate" type="date" class="input-date" name="issued-date">
+                                <input type="date" class="dtIssuedDate input-date" name="issued-date">
                             </div>
                         </div>
                     </div>
                     <div class="horizontal-alignment">
                         <div class="vertical-alignment padding-right-24px">
                             <label for="department">Phòng ban</label>
-                            <input id="txtDepartment" type="text" name="department">
+                            <select name="department" class="cbbDepartment">
+                                <option value=""></option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                                <option value="500">500</option>
+                                <option value="1000">1000</option>
+                            </select>
                         </div>
                         <div class="vertical-alignment">
                             <label for="issued-location">Nơi cấp</label>
-                            <input id="txtIssuedLocation" type="text" name="issued-location">
+                            <input type="text" name="issued-location" class="txtIssuedLocation">
                         </div>
                     </div>
                     <div class="vertical-alignment">
                         <label for="address">Địa chỉ</label>
-                        <input id="txtAddress" type="text" name="address">
+                        <input type="text" name="address" class="txtAddress">
                     </div>
                     <div class="horizontal-alignment">
                         <div class="vertical-alignment padding-right-8px">
                             <label class="label-required" for="mobilephone-number">ĐT Di động</label>
-                            <input id="txtMobilephoneNumber" type="text" name="mobilephone-number" required>
+                            <input type="text" name="mobilephone-number" class="txtMobilephoneNumber" required>
                         </div>
                         <div class="vertical-alignment padding-right-8px">
                             <label for="landline-number">ĐT Cố định</label>
-                            <input id="txtLandlineNumber" type="text" name="landline-number">
+                            <input type="text" name="landline-number" class="txtLandlineNumber">
                         </div>
                         <div class="vertical-alignment">
                             <label class="label-required" for="email">Email</label>
-                            <input id="txtEmail" type="email" name="email" required>
+                            <input type="email" name="email" class="txtEmail" required>
                         </div>
                     </div>
                     <div class="horizontal-alignment">
                         <div class="vertical-alignment padding-no padding-right-8px">
                             <label for="bank-account">Tài khoản ngân hàng</label>
-                            <input id="txtBankAccount" type="text" name="bank-account">
+                            <input type="text" name="bank-account" class="txtBankAccount">
                         </div>
                         <div class="vertical-alignment padding-no padding-right-8px">
                             <label for="bank-name">Tên ngân hàng</label>
-                            <input id="txtBankName" type="text" name="bank-name">
+                            <input type="text" name="bank-name" class="txtBankName">
                         </div>
                         <div class="vertical-alignment padding-no">
                             <label for="bank-branch">Chi nhánh</label>
-                            <input id="txtBankBranch" type="text" name="bank-branch">
+                            <input type="text" name="bank-branch" class="txtBankBranch">
                         </div>
                     </div>
                 </div>
                 <div class="form-container-button">
                     <div class="horizontal-alignment-center">
-                        <button type="button" id="btnCancel" class="btn button-cancel">Hủy</button>
-                        <button type="submit" id="btnUpdate" class="btn btn-green">Cập nhật</button>
+                        <button type="button" id="btnCancelAdd" class="btn button-cancel">Hủy</button>
                         <button type="submit" id="btnSave" class="btn btn-green">Cất</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <!-- DIALOG CHỈNH SỬA THÔNG TIN NHÂN VIÊN-->
+    <div id="dlgDetailUpdate" mdialog class="m-dialog">
+        <div class="form-container">
+            <div class="form-content">
+                <button class="btnCloseDialog"><img class="icon" src="assets/icon/x.svg" alt=""></button>
+                <div class="form-heading">
+                    <h2>Chỉnh sửa thông tin nhân viên</h2>
+                </div>
+                <div class="form-control">
+                    <div class="horizontal-alignment">
+                        <div class="vertical-alignment padding-right-8px">
+                            <label class="label-required" for="id">Mã nhân viên</label>
+                            <input type="text" name="id" class="txtEmployeeCode" required>
+                        </div>
+                        <div class="vertical-alignment padding-right-24px">
+                            <label class="label-required" for="name">Họ và tên </label>
+                            <input type="text" class="txtFullName" name="name" required>
+                        </div>
+                        <div class="vertical-alignment padding-right-8px">
+                            <label for="date-of-birth">Ngày sinh</label>
+                            <input type="date" class="dtDateOfBirth input-date" name="date-of-birth">
+                        </div>
+                        <div class="vertical-alignment">
+                            <label for="gender">Giới tính</label>
+                            <div class="horizontal-alignment">
+                                <div class="horizontal-alignment-center">
+                                    <input type="radio" name="gender" class="rdoMale" value="male">
+                                    <label for="male">Nam</label>
+                                </div>
+                                <div class="horizontal-alignment-center">
+                                    <input type="radio" name="gender" class="rdoFemale" value="female">
+                                    <label for="male">Nữ</label>
+                                </div>
+                                <div class="horizontal-alignment-center">
+                                    <input type="radio" name="gender" class="rdoOther" value="other">
+                                    <label for="male">Khác</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="horizontal-alignment">
+                        <div class="vertical-alignment padding-right-24px">
+                            <label for="position">Vị trí</label>
+                            <select name="position" class="cbbPosition">
+                                <option value=""></option>
+                                <option value="15">15</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                                <option value="500">500</option>
+                                <option value="1000">1000</option>
+                            </select>
+                        </div>
+                        <div class="horizontal-alignment">
+                            <div class="vertical-alignment padding-right-8px">
+                                <label for="id-card-number" class="label-required" title="Số chứng minh thư nhân dân">Số
+                                    CMTND</label>
+                                <input type="text" name="id-card-number" class="txtIdCardNumber" required>
+                            </div>
+                            <div class="vertical-alignment">
+                                <label for="issued-date">Ngày cấp</label>
+                                <input type="date" class="dtIssuedDate input-date" name="issued-date">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="horizontal-alignment">
+                        <div class="vertical-alignment padding-right-24px">
+                            <label for="department">Phòng ban</label>
+                            <select name="department" class="cbbDepartment">
+                                <option value=""></option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                                <option value="500">500</option>
+                                <option value="1000">1000</option>
+                            </select>
+                        </div>
+                        <div class="vertical-alignment">
+                            <label for="issued-location">Nơi cấp</label>
+                            <input type="text" name="issued-location" class="txtIssuedLocation">
+                        </div>
+                    </div>
+                    <div class="vertical-alignment">
+                        <label for="address">Địa chỉ</label>
+                        <input type="text" name="address" class="txtAddress">
+                    </div>
+                    <div class="horizontal-alignment">
+                        <div class="vertical-alignment padding-right-8px">
+                            <label class="label-required" for="mobilephone-number">ĐT Di động</label>
+                            <input type="text" name="mobilephone-number" class="txtMobilephoneNumber" required>
+                        </div>
+                        <div class="vertical-alignment padding-right-8px">
+                            <label for="landline-number">ĐT Cố định</label>
+                            <input type="text" name="landline-number" class="txtLandlineNumber">
+                        </div>
+                        <div class="vertical-alignment">
+                            <label class="label-required" for="email">Email</label>
+                            <input type="email" name="email" class="txtEmail" required>
+                        </div>
+                    </div>
+                    <div class="horizontal-alignment">
+                        <div class="vertical-alignment padding-no padding-right-8px">
+                            <label for="bank-account">Tài khoản ngân hàng</label>
+                            <input type="text" name="bank-account" class="txtBankAccount">
+                        </div>
+                        <div class="vertical-alignment padding-no padding-right-8px">
+                            <label for="bank-name">Tên ngân hàng</label>
+                            <input type="text" name="bank-name" class="txtBankName">
+                        </div>
+                        <div class="vertical-alignment padding-no">
+                            <label for="bank-branch">Chi nhánh</label>
+                            <input type="text" name="bank-branch" class="txtBankBranch">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-container-button">
+                    <div class="horizontal-alignment-center">
+                        <button type="button" id="btnCancelUpdate" class="btn button-cancel">Hủy</button>
+                        <button type="submit" id="btnUpdate" class="btn btn-green">Cất</button>
                     </div>
                 </div>
             </div>
@@ -388,7 +523,6 @@
                     <h2>Tiêu đề Dialog</h2>
                 </div>
                 <div class="dialog-control">
-                    <!-- <div><img class="icon" src="/assets/icon/question-48.png" alt=""></div> -->
                     <div class="dialog-text">Bạn có chắc chắn muốn xóa nhân viên không?</div>
                 </div>
                 <div class="float-right">
@@ -399,7 +533,6 @@
     </div>
     <!-- JAVASCRIPT -->
     <!-- Thư viện js -->
-    <script src="js/lib/jquery-3.7.1.js"></script>
     <script src="js/lib/jquery-3.7.1.min.js"></script>
     <!-- Javascript dùng chung -->
 

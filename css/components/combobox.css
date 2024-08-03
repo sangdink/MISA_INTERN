@@ -1,3 +1,7 @@
+select {
+    cursor: pointer;
+    height: 36px;
+}
 .header-combobox-container {
     min-width: 100px;
     padding-left: 24px;
@@ -11,7 +15,7 @@
     height: 36px;
     padding: 0 12px;
     border-radius: 4px;
-    border: 1px solid #fff; 
+    border: none;
 }
 #cbbRowNumber select {
     font-size: 16px;
@@ -24,10 +28,27 @@
     font-weight: bold;
 }
 .header-combobox-container select:focus {
-    border: 1px solid #50B83C;
-    outline: none; /* Ẩn đường viền mặc định khi focus */
+    outline: none; 
 }
+
 #cbbRowNumber select:focus {
     outline: none;
 }
-
+/* Combobox trong form */ 
+select.cbbPosition, select.cbbDepartment {
+    height: 36px;
+    padding: 0 6px;
+    box-sizing: border-box;
+    border: 1px solid #e0e0e0;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    border-radius: 4px;
+    line-height: 36px;
+    outline: none;
+} 
+select.cbbDepartment:focus, select.cbbPosition:focus {
+    border-color: #50b83c;
+}
+select.cbbDepartment:hover, select.cbbPosition:hover {
+    background-color: #e6e6e6;
+}

@@ -17,6 +17,7 @@
     align-items: center;
     margin: 0 12px 4px 12px;
     height: 44px;
+    cursor: pointer;
 }
 .sidebar-menu > li:before {
     content: '';
