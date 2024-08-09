@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\MISA.WebIntern.Api",
+    "\\MISA.WebIntern.Insfrastructure",
+    "\\MISA.WenIntern.Core",
+    "\\MISA.WenIntern.Core\\Services"
+  ],
+  "SelectedNode": "\\MISA.WebIntern.Api\\Program.cs",
+  "PreviewInSolutionExplorer": false
+}

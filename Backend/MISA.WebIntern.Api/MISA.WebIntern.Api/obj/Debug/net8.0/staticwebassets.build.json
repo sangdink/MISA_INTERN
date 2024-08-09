@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "i+0gsmZeG68vBBHxXCADTK0ikbqXzDi5k5s6YpH8IVo=",
+  "Source": "MISA.WebIntern.Api",
+  "BasePath": "_content/MISA.WebIntern.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
