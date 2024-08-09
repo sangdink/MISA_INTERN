@@ -64,9 +64,9 @@ class EmployeePage {
         .addEventListener("click", this.btnSaveOnClick.bind(this));
 
       // Refresh dữ liệu:
-      document
-        .querySelector("#btnRefresh")
-        .addEventListener("click", this.btnRefreshOnClick);
+      document.querySelector("#btnRefresh").addEventListener("click", () => {
+        this.loadData();
+      });
 
       // Xuất dữ liệu trong bảng ra file excel:
       document
@@ -91,10 +91,13 @@ class EmployeePage {
         .addEventListener("click", function () {
           this.parentElement.parentElement.parentElement.parentElement.style.visibility =
             "hidden";
-          me.inputInvalids[0].focus();
+          if (me.inputInvalids.length !== 0)
+          {
+            me.inputInvalids[0].focus();
+          }
         });
 
-      // Click Hủy và ẩn dialog
+      // Click Hủy và ẩn dialog:
       document
         .querySelector("#btnCancelAdd")
         .addEventListener("click", function () {
@@ -156,6 +159,7 @@ class EmployeePage {
    */
   async loadData() {
     try {
+      debugger;
       // Gọi api lấy dữ liệu:
       const res = await fetch("https://cukcuk.manhnv.net/api/v1/Employees");
       const data = await res.json();
@@ -171,6 +175,7 @@ class EmployeePage {
    * Author: DTSANG(23/07/2024)
    */
   updateTable(data) {
+    debugger;
     // Cập nhật số trang:
     this.totalPages = Math.ceil(data.length / this.pageSize);
     // Cập nhật số lượng bản ghi
@@ -313,10 +318,10 @@ class EmployeePage {
           : "";
       let gender = employee.Gender;
       switch (gender) {
-        case "0":
+        case 0:
           document.querySelector("#dlgDetailUpdate .rdoMale").checked = true;
           break;
-        case "1":
+        case 1:
           document.querySelector("#dlgDetailUpdate .rdoFemale").checked = true;
           break;
         default:
@@ -333,7 +338,7 @@ class EmployeePage {
         employee.IdentityPlace || "";
       document.querySelector("#dlgDetailUpdate .txtAddress").value =
         employee.Address || "";
-      document.querySelector("#dlgDetailUpdate .txtMobilephoneNumber").value =
+      document.querySelector("#dlgDetailUpdate .txtMobileNumber").value =
         employee.PhoneNumber || "";
       document.querySelector("#dlgDetailUpdate .txtLandlineNumber").value =
         employee.LandlineNumber || "";
@@ -389,6 +394,7 @@ class EmployeePage {
    */
   btnRefreshOnClick() {
     try {
+      debugger;
       // Làm mới dữ liệu
       this.loadData();
     } catch (error) {
@@ -478,8 +484,9 @@ class EmployeePage {
           EmployeeCode: document.querySelector("#dlgDetail .txtEmployeeCode")
             .value,
           FullName: document.querySelector("#dlgDetail .txtFullName").value,
-          Position: document.querySelector("#dlgDetail .cbbPosition").value,
-          Department: document.querySelector("#dlgDetail .cbbDepartment").value,
+          PositionName: document.querySelector("#dlgDetail .cbbPosition").value,
+          DepartmentName: document.querySelector("#dlgDetail .cbbDepartment")
+            .value,
           DateOfBirth: document.querySelector("#dlgDetail .dtDateOfBirth")
             .value,
           Gender: genderValue,
@@ -490,9 +497,8 @@ class EmployeePage {
             .value,
           IdentityPlace: document.querySelector("#dlgDetail .txtIssuedLocation")
             .value,
-          MobilephoneNumber: document.querySelector(
-            "#dlgDetail .txtMobilephoneNumber"
-          ).value,
+          PhoneNumber: document.querySelector("#dlgDetail .txtMobileNumber")
+            .value,
           LandlineNumber: document.querySelector(
             "#dlgDetail .txtLandlineNumber"
           ).value,
@@ -590,7 +596,7 @@ class EmployeePage {
         // Nếu dữ liệu hợp lệ, thực hiện cập nhật dữ liệu lên API:
         debugger;
         const genderElement = document.querySelector(
-          'input[name="gender"]:checked'
+          "input[name=\"gender\"]:checked"
         );
 
         let genderValue = null;
@@ -609,10 +615,11 @@ class EmployeePage {
           ).value,
           FullName: document.querySelector("#dlgDetailUpdate .txtFullName")
             .value,
-          Position: document.querySelector("#dlgDetailUpdate .cbbPosition")
+          PositionName: document.querySelector("#dlgDetailUpdate .cbbPosition")
             .value,
-          Department: document.querySelector("#dlgDetailUpdate .cbbDepartment")
-            .value,
+          DepartmentName: document.querySelector(
+            "#dlgDetailUpdate .cbbDepartment"
+          ).value,
           DateOfBirth: document.querySelector("#dlgDetailUpdate .dtDateOfBirth")
             .value,
           Gender: genderValue,
@@ -625,8 +632,8 @@ class EmployeePage {
           IdentityPlace: document.querySelector(
             "#dlgDetailUpdate .txtIssuedLocation"
           ).value,
-          MobilephoneNumber: document.querySelector(
-            "#dlgDetailUpdate .txtMobilephoneNumber"
+          PhoneNumber: document.querySelector(
+            "#dlgDetailUpdate .txtMobileNumber"
           ).value,
           LandlineNumber: document.querySelector(
             "#dlgDetailUpdate .txtLandlineNumber"
