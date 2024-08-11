@@ -22,9 +22,9 @@ namespace MISA.WenIntern.Core.Entities
         [DateGreaterThanToday(ErrorMessage ="Ngày sinh phải lớn hơn ngày hiện tại")]
         public DateTime? DateOfBirth { get; set; }
         public Gender Gender { get; set; }
-        public string IdentifyNumber { get; set; }
-        public DateTime? IdentifyDate { get; set; }
-        public string? IdentifyPlace { get; set; }
+        public string IdentityNumber { get; set; }
+        public DateTime? IdentityDate { get; set; }
+        public string? IdentityPlace { get; set; }
 
         [EmailAddress(ErrorMessage = "Email không đúng đính dạng")]
         public string Email { get; set; }
@@ -37,7 +37,7 @@ namespace MISA.WenIntern.Core.Entities
         public Guid? PositionId { get; set; }
         public Guid? DepartmentId { get; set; }
         public DateTime? CreatedDate { get; set; }
-        public string? createdBy { get; set; }
+        public string? CreatedBy { get; set; }
         public DateTime? ModifiedDate { get; set; }
         public string? ModifiedBy { get; set; }
         //public string GenderName

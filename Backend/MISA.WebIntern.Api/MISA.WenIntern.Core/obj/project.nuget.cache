@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Yx5/XUNx+9o=",
+  "dgSpecHash": "9v2ovNzvKo0=",
   "success": true,
-  "projectFilePath": "E:\\.NET\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",

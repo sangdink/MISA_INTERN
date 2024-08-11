@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\.NET\\MISA.WebIntern.Api\\MISA.WebIntern.Insfrastructure\\MISA.WebIntern.Insfrastructure.csproj": {}
+    "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WebIntern.Insfrastructure\\MISA.WebIntern.Insfrastructure.csproj": {}
   },
   "projects": {
-    "E:\\.NET\\MISA.WebIntern.Api\\MISA.WebIntern.Insfrastructure\\MISA.WebIntern.Insfrastructure.csproj": {
+    "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WebIntern.Insfrastructure\\MISA.WebIntern.Insfrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\.NET\\MISA.WebIntern.Api\\MISA.WebIntern.Insfrastructure\\MISA.WebIntern.Insfrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WebIntern.Insfrastructure\\MISA.WebIntern.Insfrastructure.csproj",
         "projectName": "MISA.WebIntern.Insfrastructure",
-        "projectPath": "E:\\.NET\\MISA.WebIntern.Api\\MISA.WebIntern.Insfrastructure\\MISA.WebIntern.Insfrastructure.csproj",
+        "projectPath": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WebIntern.Insfrastructure\\MISA.WebIntern.Insfrastructure.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "E:\\.NET\\MISA.WebIntern.Api\\MISA.WebIntern.Insfrastructure\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WebIntern.Insfrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -29,8 +29,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\.NET\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj": {
-                "projectPath": "E:\\.NET\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj"
+              "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj"
               }
             }
           }
@@ -83,14 +83,14 @@
         }
       }
     },
-    "E:\\.NET\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj": {
+    "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\.NET\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj",
         "projectName": "MISA.WenIntern.Core",
-        "projectPath": "E:\\.NET\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj",
+        "projectPath": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "E:\\.NET\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

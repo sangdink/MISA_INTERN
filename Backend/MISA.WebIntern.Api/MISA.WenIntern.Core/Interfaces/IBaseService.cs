@@ -11,6 +11,5 @@ namespace MISA.WenIntern.Core.Interfaces
     {
         MISAServiceResult InsertService(T entity);
         MISAServiceResult UpdateService(Guid id, T entity);
-        // MISAServiceResult DeleteService<T>(Guid id);
     }
 }

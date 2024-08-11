@@ -17,7 +17,7 @@ namespace MISA.WebIntern.Insfrastructure.MISADatabaseContext
         public IDbTransaction Transaction { get; set; }
         public MariaDbContext(IConfiguration config)
         {
-            Connection = new MySqlConnection(config.GetConnectionString("Database2"));
+            Connection = new MySqlConnection(config.GetConnectionString("Database3"));
         }
 
         public IEnumerable<T> Get<T>()

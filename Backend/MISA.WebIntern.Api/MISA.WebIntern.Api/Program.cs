@@ -9,7 +9,7 @@ using MISA.WenIntern.Core.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-Common.ConnectionString = builder.Configuration.GetConnectionString("Database2");
+Common.ConnectionString = builder.Configuration.GetConnectionString("Database3");
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

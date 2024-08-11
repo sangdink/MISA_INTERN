@@ -421,11 +421,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\.NET\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj",
       "projectName": "MISA.WenIntern.Core",
-      "projectPath": "E:\\.NET\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj",
+      "projectPath": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "E:\\.NET\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

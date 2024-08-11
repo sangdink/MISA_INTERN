@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MISA.WebIntern.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e29b473e885781d91f840dbb47cc5f98c8677bcf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ec38777667da828c07d3c9f4fcb67c6766ac5fe8")]
 [assembly: System.Reflection.AssemblyProductAttribute("MISA.WebIntern.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MISA.WebIntern.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.wenintern.core\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|solutionrelative:misa.wenintern.core\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F152C85E-A151-41D9-8A98-A4AEAB96F18F}|MISA.WebIntern.Insfrastructure\\MISA.WebIntern.Insfrastructure.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.webintern.insfrastructure\\repository\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F152C85E-A151-41D9-8A98-A4AEAB96F18F}|MISA.WebIntern.Insfrastructure\\MISA.WebIntern.Insfrastructure.csproj|solutionrelative:misa.webintern.insfrastructure\\repository\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F152C85E-A151-41D9-8A98-A4AEAB96F18F}|MISA.WebIntern.Insfrastructure\\MISA.WebIntern.Insfrastructure.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.webintern.insfrastructure\\misadatabasecontext\\mariadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F152C85E-A151-41D9-8A98-A4AEAB96F18F}|MISA.WebIntern.Insfrastructure\\MISA.WebIntern.Insfrastructure.csproj|solutionrelative:misa.webintern.insfrastructure\\misadatabasecontext\\mariadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F152C85E-A151-41D9-8A98-A4AEAB96F18F}|MISA.WebIntern.Insfrastructure\\MISA.WebIntern.Insfrastructure.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.webintern.insfrastructure\\repository\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F152C85E-A151-41D9-8A98-A4AEAB96F18F}|MISA.WebIntern.Insfrastructure\\MISA.WebIntern.Insfrastructure.csproj|solutionrelative:misa.webintern.insfrastructure\\repository\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F152C85E-A151-41D9-8A98-A4AEAB96F18F}|MISA.WebIntern.Insfrastructure\\MISA.WebIntern.Insfrastructure.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.webintern.insfrastructure\\repository\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,12 +23,64 @@
       "RelativeMoniker": "D:0:0:{6533FC97-D38E-422B-ACD7-548DC2F3A5D8}|MISA.WebIntern.Api\\MISA.WebIntern.Api.csproj|solutionrelative:misa.webintern.api\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.wenintern.core\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|solutionrelative:misa.wenintern.core\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6533FC97-D38E-422B-ACD7-548DC2F3A5D8}|MISA.WebIntern.Api\\MISA.WebIntern.Api.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.webintern.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{6533FC97-D38E-422B-ACD7-548DC2F3A5D8}|MISA.WebIntern.Api\\MISA.WebIntern.Api.csproj|solutionrelative:misa.webintern.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6533FC97-D38E-422B-ACD7-548DC2F3A5D8}|MISA.WebIntern.Api\\MISA.WebIntern.Api.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.webintern.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6533FC97-D38E-422B-ACD7-548DC2F3A5D8}|MISA.WebIntern.Api\\MISA.WebIntern.Api.csproj|solutionrelative:misa.webintern.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F152C85E-A151-41D9-8A98-A4AEAB96F18F}|MISA.WebIntern.Insfrastructure\\MISA.WebIntern.Insfrastructure.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.webintern.insfrastructure\\misadatabasecontext\\sqlserverdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F152C85E-A151-41D9-8A98-A4AEAB96F18F}|MISA.WebIntern.Insfrastructure\\MISA.WebIntern.Insfrastructure.csproj|solutionrelative:misa.webintern.insfrastructure\\misadatabasecontext\\sqlserverdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F152C85E-A151-41D9-8A98-A4AEAB96F18F}|MISA.WebIntern.Insfrastructure\\MISA.WebIntern.Insfrastructure.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.webintern.insfrastructure\\misadatabasecontext\\mysqldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F152C85E-A151-41D9-8A98-A4AEAB96F18F}|MISA.WebIntern.Insfrastructure\\MISA.WebIntern.Insfrastructure.csproj|solutionrelative:misa.webintern.insfrastructure\\misadatabasecontext\\mysqldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F152C85E-A151-41D9-8A98-A4AEAB96F18F}|MISA.WebIntern.Insfrastructure\\MISA.WebIntern.Insfrastructure.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.webintern.insfrastructure\\interfaces\\imisadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F152C85E-A151-41D9-8A98-A4AEAB96F18F}|MISA.WebIntern.Insfrastructure\\MISA.WebIntern.Insfrastructure.csproj|solutionrelative:misa.webintern.insfrastructure\\interfaces\\imisadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.wenintern.core\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|solutionrelative:misa.wenintern.core\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.wenintern.core\\dtos\\misaserviceresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|solutionrelative:misa.wenintern.core\\dtos\\misaserviceresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.wenintern.core\\exceptions\\handleexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|solutionrelative:misa.wenintern.core\\exceptions\\handleexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.wenintern.core\\exceptions\\misavalidateexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|solutionrelative:misa.wenintern.core\\exceptions\\misavalidateexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.wenintern.core\\misaenum\\misaenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|solutionrelative:misa.wenintern.core\\misaenum\\misaenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.wenintern.core\\interfaces\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|solutionrelative:misa.wenintern.core\\interfaces\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.wenintern.core\\interfaces\\iemployeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|solutionrelative:misa.wenintern.core\\interfaces\\iemployeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.wenintern.core\\interfaces\\ibaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|solutionrelative:misa.wenintern.core\\interfaces\\ibaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.wenintern.core\\interfaces\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|solutionrelative:misa.wenintern.core\\interfaces\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\misa.wenintern.core\\resource\\resourcevn.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
@@ -47,56 +95,12 @@
       "RelativeMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|solutionrelative:misa.wenintern.core\\common.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.wenintern.core\\misaenum\\misaenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|solutionrelative:misa.wenintern.core\\misaenum\\misaenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.wenintern.core\\const\\misaconst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|solutionrelative:misa.wenintern.core\\const\\misaconst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.wenintern.core\\misa.wenintern.core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|solutionrelative:misa.wenintern.core\\misa.wenintern.core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F152C85E-A151-41D9-8A98-A4AEAB96F18F}|MISA.WebIntern.Insfrastructure\\MISA.WebIntern.Insfrastructure.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.webintern.insfrastructure\\misadatabasecontext\\sqlserverdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F152C85E-A151-41D9-8A98-A4AEAB96F18F}|MISA.WebIntern.Insfrastructure\\MISA.WebIntern.Insfrastructure.csproj|solutionrelative:misa.webintern.insfrastructure\\misadatabasecontext\\sqlserverdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.wenintern.core\\exceptions\\misavalidateexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|solutionrelative:misa.wenintern.core\\exceptions\\misavalidateexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.wenintern.core\\exceptions\\handleexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|solutionrelative:misa.wenintern.core\\exceptions\\handleexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F152C85E-A151-41D9-8A98-A4AEAB96F18F}|MISA.WebIntern.Insfrastructure\\MISA.WebIntern.Insfrastructure.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.webintern.insfrastructure\\interfaces\\imisadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F152C85E-A151-41D9-8A98-A4AEAB96F18F}|MISA.WebIntern.Insfrastructure\\MISA.WebIntern.Insfrastructure.csproj|solutionrelative:misa.webintern.insfrastructure\\interfaces\\imisadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.wenintern.core\\dtos\\misaserviceresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|solutionrelative:misa.wenintern.core\\dtos\\misaserviceresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.wenintern.core\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|solutionrelative:misa.wenintern.core\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.wenintern.core\\interfaces\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|solutionrelative:misa.wenintern.core\\interfaces\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.wenintern.core\\interfaces\\ibaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|solutionrelative:misa.wenintern.core\\interfaces\\ibaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.wenintern.core\\interfaces\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|solutionrelative:misa.wenintern.core\\interfaces\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|c:\\users\\admin\\documents\\misa_ttdn\\backend\\misa.webintern.api\\misa.wenintern.core\\interfaces\\iemployeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01AE7212-0BDE-4316-A3DA-6788BC1221BC}|MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj|solutionrelative:misa.wenintern.core\\interfaces\\iemployeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -106,8 +110,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 23,
+          "SelectedChildIndex": 16,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MySqlDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WebIntern.Insfrastructure\\MISADatabaseContext\\MySqlDbContext.cs",
+              "RelativeDocumentMoniker": "MISA.WebIntern.Insfrastructure\\MISADatabaseContext\\MySqlDbContext.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WebIntern.Insfrastructure\\MISADatabaseContext\\MySqlDbContext.cs",
+              "RelativeToolTip": "MISA.WebIntern.Insfrastructure\\MISADatabaseContext\\MySqlDbContext.cs",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAswBQAAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-11T14:05:11.371Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 6,
@@ -116,9 +133,10 @@
               "RelativeDocumentMoniker": "MISA.WebIntern.Api\\appsettings.json",
               "ToolTip": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WebIntern.Api\\appsettings.json",
               "RelativeToolTip": "MISA.WebIntern.Api\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAABXAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAACXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-08T02:23:09.245Z"
+              "WhenOpened": "2024-08-08T02:23:09.245Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -128,13 +146,14 @@
               "RelativeDocumentMoniker": "MISA.WebIntern.Api\\Program.cs",
               "ToolTip": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WebIntern.Api\\Program.cs",
               "RelativeToolTip": "MISA.WebIntern.Api\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-05T16:02:57.731Z"
+              "WhenOpened": "2024-08-05T16:02:57.731Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 20,
               "Title": "ResourceVN.resx",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\Resource\\ResourceVN.resx",
               "RelativeDocumentMoniker": "MISA.WenIntern.Core\\Resource\\ResourceVN.resx",
@@ -145,19 +164,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "EmployeesController.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WebIntern.Api\\Controllers\\EmployeesController.cs",
               "RelativeDocumentMoniker": "MISA.WebIntern.Api\\Controllers\\EmployeesController.cs",
               "ToolTip": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WebIntern.Api\\Controllers\\EmployeesController.cs",
               "RelativeToolTip": "MISA.WebIntern.Api\\Controllers\\EmployeesController.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAnwCcAAAAMAAAA",
+              "ViewState": "AQIAABoAAAAAAAAAAADwvy0AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T12:45:23.34Z"
+              "WhenOpened": "2024-07-28T12:45:23.34Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 21,
               "Title": "MISA.WebIntern.Api.http",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WebIntern.Api\\MISA.WebIntern.Api.http",
               "RelativeDocumentMoniker": "MISA.WebIntern.Api\\MISA.WebIntern.Api.http",
@@ -169,7 +189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 22,
               "Title": "Common.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\Common.cs",
               "RelativeDocumentMoniker": "MISA.WenIntern.Core\\Common.cs",
@@ -181,7 +201,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "MISAEnum.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\MISAEnum\\MISAEnum.cs",
               "RelativeDocumentMoniker": "MISA.WenIntern.Core\\MISAEnum\\MISAEnum.cs",
@@ -189,11 +209,12 @@
               "RelativeToolTip": "MISA.WenIntern.Core\\MISAEnum\\MISAEnum.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T11:19:43.259Z"
+              "WhenOpened": "2024-07-30T11:19:43.259Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 23,
               "Title": "MISAConst.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\Const\\MISAConst.cs",
               "RelativeDocumentMoniker": "MISA.WenIntern.Core\\Const\\MISAConst.cs",
@@ -205,7 +226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 24,
               "Title": "MISA.WenIntern.Core.csproj",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj",
               "RelativeDocumentMoniker": "MISA.WenIntern.Core\\MISA.WenIntern.Core.csproj",
@@ -217,19 +238,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 8,
               "Title": "SQLServerDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WebIntern.Insfrastructure\\MISADatabaseContext\\SQLServerDbContext.cs",
               "RelativeDocumentMoniker": "MISA.WebIntern.Insfrastructure\\MISADatabaseContext\\SQLServerDbContext.cs",
               "ToolTip": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WebIntern.Insfrastructure\\MISADatabaseContext\\SQLServerDbContext.cs",
               "RelativeToolTip": "MISA.WebIntern.Insfrastructure\\MISADatabaseContext\\SQLServerDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA0AAAAtAAAA",
+              "ViewState": "AQIAACcAAAAAAAAAAAAowBQAAABQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T10:51:32.75Z"
+              "WhenOpened": "2024-07-30T10:51:32.75Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "MISAValidateException.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\Exceptions\\MISAValidateException.cs",
               "RelativeDocumentMoniker": "MISA.WenIntern.Core\\Exceptions\\MISAValidateException.cs",
@@ -237,11 +259,12 @@
               "RelativeToolTip": "MISA.WenIntern.Core\\Exceptions\\MISAValidateException.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T03:34:35.886Z"
+              "WhenOpened": "2024-07-30T03:34:35.886Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 13,
               "Title": "HandleExceptionMiddleware.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\Exceptions\\HandleExceptionMiddleware.cs",
               "RelativeDocumentMoniker": "MISA.WenIntern.Core\\Exceptions\\HandleExceptionMiddleware.cs",
@@ -249,19 +272,21 @@
               "RelativeToolTip": "MISA.WenIntern.Core\\Exceptions\\HandleExceptionMiddleware.cs",
               "ViewState": "AQIAAB0AAAAAAAAAAAAnwCsAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-29T16:35:21.519Z"
+              "WhenOpened": "2024-07-29T16:35:21.519Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "BaseService.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\Services\\BaseService.cs",
               "RelativeDocumentMoniker": "MISA.WenIntern.Core\\Services\\BaseService.cs",
               "ToolTip": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\Services\\BaseService.cs",
               "RelativeToolTip": "MISA.WenIntern.Core\\Services\\BaseService.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAnwBUAAAAMAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAIwCYAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-29T04:26:34.621Z"
+              "WhenOpened": "2024-07-29T04:26:34.621Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -271,37 +296,40 @@
               "RelativeDocumentMoniker": "MISA.WebIntern.Insfrastructure\\MISADatabaseContext\\MariaDbContext.cs",
               "ToolTip": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WebIntern.Insfrastructure\\MISADatabaseContext\\MariaDbContext.cs",
               "RelativeToolTip": "MISA.WebIntern.Insfrastructure\\MISADatabaseContext\\MariaDbContext.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAnwEQAAAAMAAAA",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAUwGIAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T18:21:25.67Z"
+              "WhenOpened": "2024-07-28T18:21:25.67Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 10,
               "Title": "IMISADbContext.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WebIntern.Insfrastructure\\Interfaces\\IMISADbContext.cs",
               "RelativeDocumentMoniker": "MISA.WebIntern.Insfrastructure\\Interfaces\\IMISADbContext.cs",
               "ToolTip": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WebIntern.Insfrastructure\\Interfaces\\IMISADbContext.cs",
               "RelativeToolTip": "MISA.WebIntern.Insfrastructure\\Interfaces\\IMISADbContext.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAcwBAAAAAnAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T18:12:58.634Z"
+              "WhenOpened": "2024-07-28T18:12:58.634Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "BaseRepository.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WebIntern.Insfrastructure\\Repository\\BaseRepository.cs",
               "RelativeDocumentMoniker": "MISA.WebIntern.Insfrastructure\\Repository\\BaseRepository.cs",
               "ToolTip": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WebIntern.Insfrastructure\\Repository\\BaseRepository.cs",
               "RelativeToolTip": "MISA.WebIntern.Insfrastructure\\Repository\\BaseRepository.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAewDcAAAAMAAAA",
+              "ViewState": "AQIAACoAAAAAAAAAAADwv0AAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T15:13:23.258Z"
+              "WhenOpened": "2024-07-28T15:13:23.258Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 12,
               "Title": "MISAServiceResult.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\DTOs\\MISAServiceResult.cs",
               "RelativeDocumentMoniker": "MISA.WenIntern.Core\\DTOs\\MISAServiceResult.cs",
@@ -309,23 +337,25 @@
               "RelativeToolTip": "MISA.WenIntern.Core\\DTOs\\MISAServiceResult.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T13:30:29.331Z"
+              "WhenOpened": "2024-07-28T13:30:29.331Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 5,
               "Title": "EmployeeService.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\Services\\EmployeeService.cs",
               "RelativeDocumentMoniker": "MISA.WenIntern.Core\\Services\\EmployeeService.cs",
               "ToolTip": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\Services\\EmployeeService.cs",
               "RelativeToolTip": "MISA.WenIntern.Core\\Services\\EmployeeService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAANAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAtwB8AAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T12:49:10.707Z"
+              "WhenOpened": "2024-07-28T12:49:10.707Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "EmployeeRepository.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WebIntern.Insfrastructure\\Repository\\EmployeeRepository.cs",
               "RelativeDocumentMoniker": "MISA.WebIntern.Insfrastructure\\Repository\\EmployeeRepository.cs",
@@ -333,11 +363,12 @@
               "RelativeToolTip": "MISA.WebIntern.Insfrastructure\\Repository\\EmployeeRepository.cs",
               "ViewState": "AQIAAAcAAAAAAAAAAAAnwBUAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T12:42:03.657Z"
+              "WhenOpened": "2024-07-28T12:42:03.657Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 16,
               "Title": "IEmployeeService.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\Interfaces\\IEmployeeService.cs",
               "RelativeDocumentMoniker": "MISA.WenIntern.Core\\Interfaces\\IEmployeeService.cs",
@@ -345,23 +376,25 @@
               "RelativeToolTip": "MISA.WenIntern.Core\\Interfaces\\IEmployeeService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwAkAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T12:40:07.834Z"
+              "WhenOpened": "2024-07-28T12:40:07.834Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 18,
               "Title": "IBaseService.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\Interfaces\\IBaseService.cs",
               "RelativeDocumentMoniker": "MISA.WenIntern.Core\\Interfaces\\IBaseService.cs",
               "ToolTip": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\Interfaces\\IBaseService.cs",
               "RelativeToolTip": "MISA.WenIntern.Core\\Interfaces\\IBaseService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAwAAAAxAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAwAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T12:39:06.93Z"
+              "WhenOpened": "2024-07-28T12:39:06.93Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 19,
               "Title": "IBaseRepository.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\Interfaces\\IBaseRepository.cs",
               "RelativeDocumentMoniker": "MISA.WenIntern.Core\\Interfaces\\IBaseRepository.cs",
@@ -369,11 +402,12 @@
               "RelativeToolTip": "MISA.WenIntern.Core\\Interfaces\\IBaseRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T12:30:12.906Z"
+              "WhenOpened": "2024-07-28T12:30:12.906Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 17,
               "Title": "IEmployeeRepository.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\Interfaces\\IEmployeeRepository.cs",
               "RelativeDocumentMoniker": "MISA.WenIntern.Core\\Interfaces\\IEmployeeRepository.cs",
@@ -381,17 +415,18 @@
               "RelativeToolTip": "MISA.WenIntern.Core\\Interfaces\\IEmployeeRepository.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAArwBQAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T12:29:37.278Z"
+              "WhenOpened": "2024-07-28T12:29:37.278Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 11,
               "Title": "Employee.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\Entities\\Employee.cs",
               "RelativeDocumentMoniker": "MISA.WenIntern.Core\\Entities\\Employee.cs",
               "ToolTip": "C:\\Users\\Admin\\Documents\\MISA_TTDN\\Backend\\MISA.WebIntern.Api\\MISA.WenIntern.Core\\Entities\\Employee.cs",
               "RelativeToolTip": "MISA.WenIntern.Core\\Entities\\Employee.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAxwCIAAAAbAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwBoAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-28T12:27:44.614Z",
               "EditorCaption": ""

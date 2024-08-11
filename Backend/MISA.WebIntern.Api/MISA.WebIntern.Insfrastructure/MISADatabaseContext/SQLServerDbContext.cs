@@ -18,7 +18,7 @@ namespace MISA.WebIntern.Insfrastructure.MISADatabaseContext
 
         public SQLServerDbContext(IConfiguration config)
         {
-            Connection = new SqlConnection(config.GetConnectionString("Database2"));
+            Connection = new SqlConnection(config.GetConnectionString("Database3"));
         }
         public IEnumerable<T> Get<T>()
         {

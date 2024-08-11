@@ -29,7 +29,7 @@ namespace MISA.WenIntern.Core.Services
                 throw new MISAValidateException(MISA.WenIntern.Core.Resource.ResourceVN.ValidateMsg_Employee_FullNameNotEmpty);
             }
             // Thực hiện kiểm tra số CMTND:
-            if (string.IsNullOrEmpty(entity.IdentifyNumber))
+            if (string.IsNullOrEmpty(entity.IdentityNumber))
             {
                 throw new MISAValidateException(MISA.WenIntern.Core.Resource.ResourceVN.ValidateMsg_Employee_IdentityNumberNotEmpty);
             }
